@@ -5,6 +5,7 @@ Team members: Alexander Klein, Donovan Heynen, Jacob Lockwood, Simon Hillebrands
 # Introduction
 
 (In 2-4 paragraphs, describe your project concept)
+The goal of our project is to create a mathematical application that is geared towards college students. This will have many features including graphing, step by step solutions, and much more. We want our project to be ready for you as soon as we can, so when we first release the app may seem simple, but we will be adding new features every 2-3 weeks.
 
 # Anticipated Technologies
 
