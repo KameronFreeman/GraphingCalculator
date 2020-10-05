@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         basicCalc_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //enter new screen
+                //enter the basic calculator screen
             }
         });
 
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         stepByStep_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //enter new screen
+                //enter the step by step screen
             }
         });
     }
