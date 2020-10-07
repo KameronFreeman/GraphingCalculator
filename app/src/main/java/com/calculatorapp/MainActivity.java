@@ -1,11 +1,11 @@
 package com.calculatorapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
 import android.widget.Button;
-import android.os.Bundle;
 
 import com.example.calculatorapp.R;
 
@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //enter the step by step screen
+                Intent sbsIntent = new Intent(getApplicationContext(), StepbystepMenu.class);
+                startActivity(sbsIntent);
             }
         });
     }
