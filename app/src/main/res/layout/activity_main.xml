@@ -42,9 +42,20 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/basicCalc_Button"
-        app:layout_constraintVertical_bias="0.204" />
+        app:layout_constraintVertical_bias="0.191" />
+
+    <Button
+        android:id="@+id/graphingCalc_Button"
+        android:layout_width="226dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/graphing_calculator"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stepByStep_Button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

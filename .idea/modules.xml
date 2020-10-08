@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/CalculatorApp.iml" filepath="$PROJECT_DIR$/.idea/modules/CalculatorApp.iml" group="CalculatorApp" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="CalculatorApp/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jcommon-1.0.23/jcommon-1.0.23.iml" filepath="$PROJECT_DIR$/.idea/modules/jcommon-1.0.23/jcommon-1.0.23.iml" group="CalculatorApp/jcommon-1.0.23" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jfreechart-1.0.19/jfreechart-1.0.19.iml" filepath="$PROJECT_DIR$/.idea/modules/jfreechart-1.0.19/jfreechart-1.0.19.iml" group="CalculatorApp/jfreechart-1.0.19" />
     </modules>
   </component>
 </project>

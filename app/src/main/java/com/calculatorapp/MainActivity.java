@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         //button variables
         Button basicCalc_Button = (Button) findViewById(R.id.basicCalc_Button);
         Button stepByStep_Button = (Button) findViewById(R.id.stepByStep_Button);
+        Button graphingCalc_Button = (Button) findViewById(R.id.graphingCalc_Button);
 
         //if Basic Calc Button pressed ...
         basicCalc_Button.setOnClickListener(new View.OnClickListener() {
@@ -35,6 +36,14 @@ public class MainActivity extends AppCompatActivity {
                 //enter the step by step screen
                 Intent sbsIntent = new Intent(getApplicationContext(), StepbystepMenu.class);
                 startActivity(sbsIntent);
+            }
+        });
+
+        //if Graphing Calculator Button pressed...
+        graphingCalc_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //enter graphing calculator screen
             }
         });
     }

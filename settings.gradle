@@ -1,2 +1,4 @@
+include ':jfreechart-1.0.19'
+include ':jcommon-1.0.23'
 include ':app'
 rootProject.name = "CalculatorApp"
