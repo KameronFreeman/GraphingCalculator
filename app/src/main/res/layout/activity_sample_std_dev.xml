@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.calculatorapp.SampleStdDev">
+
+    <Button
+        android:id="@+id/addButtonSD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="416dp"
+        android:text="Add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.791"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/backButtonSD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.021" />
+
+    <TextView
+        android:id="@+id/textStdDev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:text="Sample Standard Deviation"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.43"
+        app:layout_constraintStart_toEndOf="@+id/backButtonSM"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.039" />
+
+    <ScrollView
+        android:id="@+id/scrollSD"
+        android:layout_width="411dp"
+        android:layout_height="377dp"
+        android:layout_marginTop="173dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputTextSM"
+        app:layout_constraintVertical_bias="0.894">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/outputTextSD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/clearButtonSD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="40dp"
+        android:text="Clear"
+        app:layout_constraintBottom_toTopOf="@+id/scrollSD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/inputTextValueSD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Enter Value"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/scrollSD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.751"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textStdDev"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/inputTextMeanSD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Mean"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/scrollSD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.756"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputTextValueSD"
+        app:layout_constraintVertical_bias="0.144" />
+
+    <Button
+        android:id="@+id/negativeButtonSD1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+/-"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/negativeButtonSD2"
+        app:layout_constraintEnd_toStartOf="@+id/inputTextValueSD"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backButtonSD" />
+
+    <Button
+        android:id="@+id/negativeButtonSD2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+/-"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/clearButtonSD"
+        app:layout_constraintEnd_toStartOf="@+id/inputTextMeanSD"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backButtonSD"
+        app:layout_constraintVertical_bias="0.621" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

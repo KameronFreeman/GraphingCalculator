@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.calculatorapp.StepbystepMenu"></activity>
+        <activity android:name="com.calculatorapp.TwoMeans"></activity>
+        <activity android:name="com.calculatorapp.PopProp" />
+        <activity android:name="com.calculatorapp.PopMean" />
+        <activity android:name="com.calculatorapp.CorrelationCoeff" />
+        <activity android:name="com.calculatorapp.SampleStdDev" />
+        <activity android:name="com.calculatorapp.SampleMean" />
+        <activity android:name="com.calculatorapp.StepbystepMenu" />
         <activity android:name="com.calculatorapp.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
