@@ -31,7 +31,7 @@ public class SampleMean extends AppCompatActivity {
 
         //Initializes Text Boxes.
         final TextView inputTextSM = (TextView) findViewById(R.id.inputTextSM);
-        final TextView outputTextSM = (TextView) findViewById(R.id.outputTextSD);
+        final TextView outputTextSM = (TextView) findViewById(R.id.outputTextSM);
 
         //Returns to the step-by-step menu.
         backButtonSM.setOnClickListener(new View.OnClickListener() {

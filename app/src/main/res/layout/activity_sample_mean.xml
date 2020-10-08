@@ -65,7 +65,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="44dp"
         android:text="Clear"
-        app:layout_constraintBottom_toTopOf="@+id/scrollSD"
+        app:layout_constraintBottom_toTopOf="@+id/scrollCC"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.218"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,7 +86,7 @@
         app:layout_constraintVertical_bias="0.087" />
 
     <ScrollView
-        android:id="@+id/scrollSD"
+        android:id="@+id/scrollCC"
         android:layout_width="411dp"
         android:layout_height="377dp"
         android:layout_marginTop="173dp"
@@ -103,7 +103,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/outputTextSD"
+                android:id="@+id/outputTextSM"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:visibility="visible" />
