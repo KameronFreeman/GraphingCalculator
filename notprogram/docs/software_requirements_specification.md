@@ -15,11 +15,8 @@ The non functional requirements list how the program should run when interacted 
 3. Basic Calculator
     1. Basic calculator needs to handle basic addition, subtraction, multiplication, and division manipulation of variable input by the user.
     2. Equal button pressed by the user will update the display screen to output the answer.
-    3.
 4. Menu
     1. User must be able to press buttons on the menu screen to access different parts of the code.
-    2.
-    3.
 
 # Non-Functional Requirements
 
@@ -31,8 +28,5 @@ The non functional requirements list how the program should run when interacted 
 3. Basic Calculator
     1. Program shall be able to detect if an input is valid or invalid.
     2. Basic calculator must have a shared display screen for user inputs and outputs.
-    3.
 4. Menu
     1. Menu shall seemlessly move to and from different section of the program.
-    2.
-    3.
