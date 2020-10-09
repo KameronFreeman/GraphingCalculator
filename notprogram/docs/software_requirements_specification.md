@@ -13,7 +13,7 @@ The non functional requirements list how the program should run when interacted 
     2. Step-by-step shall output answers in a cohesive way so the user can understand how to do the calculation themselves.
     3. User shall be able to go back to other functions of the app from the step-by-step portion.
 3. Basic Calculator
-    1. Basic calculator needs to handle basic addition, subtraction, multiplication, and division manipulation of variables input by the user.
+    1. Basic calculator needs to handle basic addition, subtraction, multiplication, and division manipulation of variable input by the user.
     2. Basic calculator must have a shared display screen for user inputs and outputs.
     3.
 4. Menu
