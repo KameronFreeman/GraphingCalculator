@@ -18,9 +18,9 @@ The non functional requirements list how the program should run when interacted 
 4. Menu
     1. User must be able to press buttons on the menu screen to access different parts of the code.
 5. Calculus
-    1. User shall input a function into a textbox
-    2. User shall selct a calculus option (ex: 1st derivative, nth derivative...to be determined)
-    3. User shall be able to click on calculus option in menu to go to calculus calculator
+    1. User shall input a function into a text-box.
+    2. User shall select a calculus option (ex: 1st derivative, nth derivative...to be determined).
+    3. User shall be able to click on calculus option in menu to go to calculus calculator.
 
 # Non-Functional Requirements
 
@@ -35,6 +35,6 @@ The non functional requirements list how the program should run when interacted 
 4. Menu
     1. Menu shall seemlessly move to and from different section of the program.
 5. Calculus
-    1. If show graph option is selected, the app shall display a graph of the entered function and the selected option 
-    2. An output display shall update with a solution when a valid function is entered along with a calculus option being selected
-    3. The app once in the calculus portion shall be able to go back to the main menu 
+    1. If show graph option is selected, the app shall display a graph of the entered function and the selected option.
+    2. An output display shall update with a solution when a valid function is entered along with a calculus option being selected.
+    3. The app once in the calculus portion shall be able to go back to the main menu.
