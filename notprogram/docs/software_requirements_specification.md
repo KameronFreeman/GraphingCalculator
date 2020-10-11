@@ -21,6 +21,11 @@ The non functional requirements list how the program should run when interacted 
     1. User shall input a function into a text-box.
     2. User shall select a calculus option (ex: 1st derivative, nth derivative...to be determined).
     3. User shall be able to click on calculus option in menu to go to calculus calculator.
+6. Graphing Calculator
+    1. The graphing calculator shall solve and graph functions inputted by user
+    2. The graphing calculator shall display solutions to systems of equations when the user enters multiple functions
+    3. The graphing calculator shall zoom in and out if the user chooses
+
 
 # Non-Functional Requirements
 
@@ -38,3 +43,9 @@ The non functional requirements list how the program should run when interacted 
     1. If show graph option is selected, the app shall display a graph of the entered function and the selected option.
     2. An output display shall update with a solution when a valid function is entered along with a calculus option being selected.
     3. The app once in the calculus portion shall be able to go back to the main menu.
+6. Graphing Calculator
+    1. The graphing calculator shall graph separate lines in different colors
+    2. The graphing calculator shall be able to do graph complex equations
+    3. The graphing calculator shall not crash and look clean
+
+    
