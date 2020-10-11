@@ -8,17 +8,12 @@
   3): App calculates what the graph(s) will look like.
   4): App displays the graph(s) on the screen in the allotted window.
   
-  **Cross Reference:** F-5-i, N-5-i, N-5-ii
+**Cross Reference:** F-5-i, N-5-i, N-5-ii
   
-  **Use-Cases:** User must have navigated to the calculus feature and inputted (a) function(s).
+**Use-Cases:** User must have navigated to the calculus feature and inputted (a) function(s).
 
 
-
-
-
-
-
-**Use Case:** Select Function Option
+**Use Case: Select Function Option**
 
 **Actors:** User (initiator)
 
