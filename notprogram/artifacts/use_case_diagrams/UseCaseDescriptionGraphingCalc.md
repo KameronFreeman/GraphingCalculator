@@ -18,9 +18,9 @@
 **Actors:** User (initiator)
 
 **Description:** (Ordered)
-  1):
-  2):
-  3):
+  1): User enters Calculus feature of app
+  2): User selects a function option
+  3): User inputs function
   
 **Cross Reference:** 
 
