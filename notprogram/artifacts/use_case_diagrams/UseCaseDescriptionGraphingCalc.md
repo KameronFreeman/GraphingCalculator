@@ -25,3 +25,14 @@
 **Cross Reference:** F-5-i, F-5-ii, F-5-iii, N-5-i, N-5-ii
 
 **User-Cases:** User must have navigated to the calculus feature and inputted (a) function(s).
+
+**Use Case: Input function**
+
+**Actors:** User (initiator)
+
+**Description:** (Ordered)
+  1.  User enters Calculus feature of app
+  2.  User inputs function into an input box
+  3.  User selcts a function option to simplify their input
+  
+**Cross Reference:** F-5-i, F-5-ii, F-5-iii, NF-5-ii
