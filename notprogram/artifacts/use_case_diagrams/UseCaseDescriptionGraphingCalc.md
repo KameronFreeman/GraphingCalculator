@@ -3,10 +3,10 @@
 **Actors:** User(initiator)
 
 **Description:** (Ordered)
-  1): User presses "Show Graph" button.
-  2): App takes inputted function(s) from input boxes.
-  3): App calculates what the graph(s) will look like.
-  4): App displays the graph(s) on the screen in the allotted window.
+  1. User presses "Show Graph" button.
+  2. App takes inputted function(s) from input boxes.
+  3. App calculates what the graph(s) will look like.
+  4. App displays the graph(s) on the screen in the allotted window.
   
   **Cross Reference:** F-5-i, N-5-i, N-5-ii
   
