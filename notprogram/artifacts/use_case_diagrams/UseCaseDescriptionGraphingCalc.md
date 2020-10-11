@@ -31,8 +31,9 @@
 **Actors:** User (initiator)
 
 **Description:** (Ordered)
-  1.  User enters Calculus feature of app
-  2.  User inputs function into an input box
-  3.  User selcts a function option to simplify their input
+  1.  User inputs function into an input box
+  2.  User selcts a function option to simplify their input
   
 **Cross Reference:** F-5-i, F-5-ii, F-5-iii, NF-5-ii
+
+**User-Cases:** User must have navigated to the Calculus feature.
