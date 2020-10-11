@@ -250,7 +250,7 @@ public class CorrelationCoeff extends AppCompatActivity {
                                 meanY)) / (sX * sY);
                     }
 
-                    Double answer = sum * (1 / (count - 1));
+                    double answer = sum * (1 / ((double) count - 1));
 
                     outputTextCC.setText("First, we must take the sum of all of the values of x and" +
                             " y subtracted by their respective means, and then divided by sx X" +
