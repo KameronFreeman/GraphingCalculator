@@ -2,6 +2,7 @@ package com.calculatorapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -44,10 +45,11 @@ public class SampleMean extends AppCompatActivity {
 
         //Adds or removes a negative from the input box.
         negativeButtonSM.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 String temp = inputTextSM.getText().toString();
-                if (temp.matches("") == false) {
+                if (!temp.matches("")) {
                     outputTextSM.setText("");
                     if (temp.charAt(0) != '-') {
                         inputTextSM.setText("-" + temp);
@@ -75,12 +77,13 @@ public class SampleMean extends AppCompatActivity {
         //Adds the value to the arraylist, calculates the answer, and provides a step-by-step
         //explanation of the process.
         addButtonSM.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 String tempString = inputTextSM.getText().toString();
                 inputTextSM.setText("");
-                if (tempString.matches("") == false ||
-                        tempString.matches(".") == false) {
+                if (tempString.equals("") == false ||
+                        tempString.equals(".") == false) {
                     Double tempValue = Double.parseDouble(tempString);
                     values.add(tempValue);
                     count++;
@@ -96,9 +99,9 @@ public class SampleMean extends AppCompatActivity {
                     }
                     Double mean = sum / count;
                     outputTextSM.setText("First, we must add all of the given values together, " +
-                            "which looks like: " + formulaString + "\nThen, we must divide it by" +
-                            " the total number of values, which gives us: " + sum + "/" + count +
-                            "\n Which gives us our answer: " + mean);
+                            "which looks like: " + formulaString + " = " + sum +
+                            "\nThen, we must divide it by the total number of values, which gives" +
+                            " us: " + sum + "/" + count + "\n Which gives us our answer: " + mean);
                 } else {
                     //FIX:Crash somehow caused here
                     outputTextSM.setText("Please enter a valid number.");

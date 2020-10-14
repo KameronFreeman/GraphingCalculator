@@ -2,6 +2,7 @@ package com.calculatorapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -58,10 +59,11 @@ public class CorrelationCoeff extends AppCompatActivity {
 
         //Adds or removes a negative from the input box.
         negativeButtonCC1.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 String temp = inputXValueCC.getText().toString();
-                if (temp.matches("") == false) {
+                if (!temp.matches("")) {
                     outputTextCC.setText("");
                     if (temp.charAt(0) != '-') {
                         inputXValueCC.setText("-" + temp);
@@ -77,10 +79,11 @@ public class CorrelationCoeff extends AppCompatActivity {
 
         //Adds or removes a negative from the input box.
         negativeButtonCC2.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 String temp = inputXMeanCC.getText().toString();
-                if (temp.matches("") == false) {
+                if (!temp.matches("")) {
                     outputTextCC.setText("");
                     if (temp.charAt(0) != '-') {
                         inputXMeanCC.setText("-" + temp);
@@ -96,10 +99,11 @@ public class CorrelationCoeff extends AppCompatActivity {
 
         //Adds or removes a negative from the input box.
         negativeButtonCC3.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 String temp = inputSXCC.getText().toString();
-                if (temp.matches("") == false) {
+                if (!temp.matches("")) {
                     outputTextCC.setText("");
                     if (temp.charAt(0) != '-') {
                         inputSXCC.setText("-" + temp);
@@ -115,10 +119,11 @@ public class CorrelationCoeff extends AppCompatActivity {
 
         //Adds or removes a negative from the input box.
         negativeButtonCC4.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 String temp = inputYValueCC.getText().toString();
-                if (temp.matches("") == false) {
+                if (!temp.matches("")) {
                     outputTextCC.setText("");
                     if (temp.charAt(0) != '-') {
                         inputYValueCC.setText("-" + temp);
@@ -134,10 +139,11 @@ public class CorrelationCoeff extends AppCompatActivity {
 
         //Adds or removes a negative from the input box.
         negativeButtonCC5.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 String temp = inputYMeanCC.getText().toString();
-                if (temp.matches("") == false) {
+                if (!temp.matches("")) {
                     outputTextCC.setText("");
                     if (temp.charAt(0) != '-') {
                         inputYMeanCC.setText("-" + temp);
@@ -153,10 +159,11 @@ public class CorrelationCoeff extends AppCompatActivity {
 
         //Adds or removes a negative from the input box.
         negativeButtonCC6.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 String temp = inputSYCC.getText().toString();
-                if (temp.matches("") == false) {
+                if (!temp.matches("")) {
                     outputTextCC.setText("");
                     if (temp.charAt(0) != '-') {
                         inputSYCC.setText("-" + temp);
@@ -195,6 +202,7 @@ public class CorrelationCoeff extends AppCompatActivity {
         //explanation of the process.
         //FIX:Causes major crash somewhere.
         addButtonCC.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 String tempStringValueX = inputXValueCC.getText().toString();
@@ -205,24 +213,24 @@ public class CorrelationCoeff extends AppCompatActivity {
                 inputYValueCC.setText("");
                 String tempStringMeanY = inputYMeanCC.getText().toString();
                 String tempStringSY = inputSYCC.getText().toString();
-                if (tempStringValueX.matches("") == false ||
-                        tempStringValueX.matches(".") == false ||
-                        tempStringMeanX.matches("") == false ||
-                        tempStringMeanX.matches(".") == false ||
-                        tempStringSX.matches("") == false ||
-                        tempStringSX.matches(".") == false ||
-                        tempStringValueY.matches("") == false ||
-                        tempStringValueY.matches(".") == false ||
-                        tempStringMeanY.matches(".") == false ||
-                        tempStringMeanY.matches("") == false ||
-                        tempStringSY.matches("") == false ||
-                        tempStringSY.matches(".") == false) {
+                if (tempStringValueX.equals("") == false ||
+                        tempStringValueX.equals(".") == false ||
+                        tempStringMeanX.equals("") == false ||
+                        tempStringMeanX.equals(".") == false ||
+                        tempStringSX.equals("") == false ||
+                        tempStringSX.equals(".") == false ||
+                        tempStringValueY.equals("") == false ||
+                        tempStringValueY.equals(".") == false ||
+                        tempStringMeanY.equals(".") == false ||
+                        tempStringMeanY.equals("") == false ||
+                        tempStringSY.equals("") == false ||
+                        tempStringSY.equals(".") == false) {
                     Double tempValueValueX = Double.parseDouble(tempStringValueX);
-                    Double tempValueMeanX = Double.parseDouble(tempStringMeanX);
-                    Double tempValueSX = Double.parseDouble(tempStringSX);
+                    meanX = Double.parseDouble(tempStringMeanX);
+                    sX = Double.parseDouble(tempStringSX);
                     Double tempValueValueY = Double.parseDouble(tempStringValueY);
-                    Double tempValueMeanY = Double.parseDouble(tempStringMeanY);
-                    Double tempValueSY = Double.parseDouble(tempStringSY);
+                    meanY = Double.parseDouble(tempStringMeanY);
+                    sY = Double.parseDouble(tempStringSY);
                     xValues.add(tempValueValueX);
                     yValues.add(tempValueValueY);
                     count++;
@@ -231,15 +239,15 @@ public class CorrelationCoeff extends AppCompatActivity {
                     for (int i = 0; i < count; i++) {
                         if (i == count - 1) {
                             formulaString = formulaString + "((" + xValues.get(i) + "-" +
-                                    tempValueMeanX + ")*("+ yValues.get(i) + "-"+ tempValueMeanY +
-                                    "))/(" + tempValueSX + "*" + tempValueSY + ")";
+                                    meanX + ")*("+ yValues.get(i) + "-"+ meanY +
+                                    "))/(" + sX + "*" + sY + ")";
                         } else {
                             formulaString = formulaString + "((" + xValues.get(i) + "-" +
-                                    tempValueMeanX + ")*("+ yValues.get(i) + "-"+ tempValueMeanY +
-                                    "))/(" + tempValueSX + "*" + tempValueSY + ")" + " + ";
+                                    meanX + ")*("+ yValues.get(i) + "-"+ meanY +
+                                    "))/(" + sX + "*" + sY + ")" + " + ";
                         }
-                        sum += ((xValues.get(i) - tempValueMeanX) * (yValues.get(i) -
-                                tempValueMeanY)) / (tempValueSX * tempValueSY);
+                        sum += ((xValues.get(i) - meanX) * (yValues.get(i) -
+                                meanY)) / (sX * sY);
                     }
 
                     Double answer = sum * (1 / (count - 1));

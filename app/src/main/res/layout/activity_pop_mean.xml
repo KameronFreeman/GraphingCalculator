@@ -88,7 +88,7 @@
         app:layout_constraintVertical_bias="0.53" />
 
     <ScrollView
-        android:id="@+id/scrollCC"
+        android:id="@+id/scrollPM"
         android:layout_width="383dp"
         android:layout_height="322dp"
         android:layout_marginTop="173dp"
@@ -113,63 +113,32 @@
     </ScrollView>
 
     <EditText
-        android:id="@+id/inputTextMeanPM"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="260dp"
-        android:ems="10"
-        android:hint="Enter X Mean"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toTopOf="@+id/scrollCC"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.781"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textStdDev"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/negativeButtonPM1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="260dp"
-        android:text="+/-"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/scrollCC"
-        app:layout_constraintEnd_toStartOf="@+id/inputTextMeanSD"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backButtonSD"
-        app:layout_constraintVertical_bias="0.621" />
-
-    <Button
-        android:id="@+id/negativeButtonPM2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="204dp"
-        android:text="+/-"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/scrollCC"
-        app:layout_constraintEnd_toStartOf="@+id/inputTextValueSD"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backButtonSD" />
-
-    <EditText
         android:id="@+id/inputExpectedPM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="204dp"
         android:ems="10"
         android:hint="Enter Expected"
         android:inputType="numberDecimal"
-        app:layout_constraintBottom_toTopOf="@+id/scrollCC"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.781"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputTextValueSD"
-        app:layout_constraintVertical_bias="0.144" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.223" />
+
+    <EditText
+        android:id="@+id/inputTextMeanPM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter X Mean"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.781"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.137" />
 
     <Button
         android:id="@+id/backButtonPM"
@@ -178,7 +147,7 @@
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintHorizontal_bias="0.095"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023" />
@@ -187,7 +156,7 @@
         android:id="@+id/textPopMean"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="96dp"
+        android:layout_marginEnd="76dp"
         android:text="Population Mean"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -195,6 +164,32 @@
         app:layout_constraintHorizontal_bias="0.43"
         app:layout_constraintStart_toEndOf="@+id/backButtonSM"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.039" />
+        app:layout_constraintVertical_bias="0.038" />
+
+    <Button
+        android:id="@+id/negativeButtonPM2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+/-"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.216" />
+
+    <Button
+        android:id="@+id/negativeButtonPM1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+/-"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.129" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

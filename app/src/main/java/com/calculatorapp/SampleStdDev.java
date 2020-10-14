@@ -2,6 +2,7 @@ package com.calculatorapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,9 +16,9 @@ import java.util.ArrayList;
 public class SampleStdDev extends AppCompatActivity {
 
     //Initializes variables.
-    private ArrayList<Double> values = new ArrayList();
+    private ArrayList<Double> values = new ArrayList<>();
     private int count = 0;
-    private double mean = 0;
+    private Double mean = 0.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,10 +48,11 @@ public class SampleStdDev extends AppCompatActivity {
 
         //Adds or removes a negative from the input box.
         negativeButtonSD1.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 String temp = inputTextValue.getText().toString();
-                if (temp.matches("") == false) {
+                if (!temp.matches("")) {
                     outputTextSD.setText("");
                     if (temp.charAt(0) != '-') {
                         inputTextValue.setText("-" + temp);
@@ -66,10 +68,11 @@ public class SampleStdDev extends AppCompatActivity {
 
         //Adds or removes a negative from the input box.
         negativeButtonSD2.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 String temp = inputTextMean.getText().toString();
-                if (temp.matches("") == false) {
+                if (!temp.matches("")) {
                     outputTextSD.setText("");
                     if (temp.charAt(0) != '-') {
                         inputTextMean.setText("-" + temp);
@@ -99,17 +102,18 @@ public class SampleStdDev extends AppCompatActivity {
         //Adds the value to the arraylist, calculates the answer, and provides a step-by-step
         //explanation of the process.
         addButtonSD.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 String tempStringValue = inputTextValue.getText().toString();
                 inputTextValue.setText("");
                 String tempStringMean = inputTextMean.getText().toString();
-                if (tempStringValue.matches("") == false ||
-                        tempStringValue.matches(".") == false ||
-                            tempStringMean.matches("") == false ||
-                                tempStringMean.matches(".") == false) {
+                if (!tempStringValue.equals("") ||
+                        !tempStringValue.equals(".") ||
+                        !tempStringMean.equals("") ||
+                        !tempStringMean.equals(".")) {
                     Double tempValueValue = Double.parseDouble(tempStringValue);
-                    Double tempValueMean = Double.parseDouble(tempStringMean);
+                    mean = Double.parseDouble(tempStringMean);
                     values.add(tempValueValue);
                     count++;
                     String formulaString = "";
@@ -117,12 +121,12 @@ public class SampleStdDev extends AppCompatActivity {
                     for (int i = 0; i < count; i++) {
                         if (i == count - 1) {
                             formulaString = formulaString + "(" + values.get(i) + "-" +
-                            tempValueMean + ")^2";
+                            mean + ")^2";
                         } else {
                             formulaString = formulaString + "(" + values.get(i)
-                                    + "-" + tempValueMean + ")^2" + " + ";
+                                    + "-" + mean + ")^2" + " + ";
                         }
-                        sum += Math.pow((values.get(i) - tempValueMean), 2);
+                        sum += Math.pow((values.get(i) - mean), 2);
                     }
 
                     Double preSquareRoot = sum / (count - 1);

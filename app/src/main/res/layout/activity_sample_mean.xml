@@ -11,13 +11,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sample Mean"
-        android:textSize="30sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.43"
+        app:layout_constraintHorizontal_bias="0.431"
         app:layout_constraintStart_toEndOf="@+id/backButtonSM"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.036" />
 
     <Button
         android:id="@+id/backButtonSM"
@@ -86,7 +86,7 @@
         app:layout_constraintVertical_bias="0.087" />
 
     <ScrollView
-        android:id="@+id/scrollCC"
+        android:id="@+id/scrollSM"
         android:layout_width="411dp"
         android:layout_height="377dp"
         android:layout_marginTop="173dp"

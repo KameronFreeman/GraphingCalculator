@@ -2,6 +2,7 @@ package com.calculatorapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -25,8 +26,8 @@ public class PopMean extends AppCompatActivity {
 
         //Initialize buttons.
         Button backButtonPM = (Button) findViewById(R.id.backButtonPM);
-        Button negativeButtonPM1 = (Button) findViewById(R.id.negativeButtonSD1);
-        Button negativeButtonPM2 = (Button) findViewById(R.id.negativeButtonSD2);
+        Button negativeButtonPM1 = (Button) findViewById(R.id.negativeButtonPM1);
+        Button negativeButtonPM2 = (Button) findViewById(R.id.negativeButtonPM2);
         Button negativeButtonPM3 = (Button) findViewById(R.id.negativeButtonPM3);
         Button negativeButtonPM4 = (Button) findViewById(R.id.negativeButtonPM4);
         Button clearButtonPM = (Button) findViewById(R.id.clearButtonPM);
@@ -50,10 +51,11 @@ public class PopMean extends AppCompatActivity {
 
         //Adds or removes a negative from the input box.
         negativeButtonPM1.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 String temp = inputTextMean.getText().toString();
-                if (temp.matches("") == false) {
+                if (!temp.matches("")) {
                     outputText.setText("");
                     if (temp.charAt(0) != '-') {
                         inputTextMean.setText("-" + temp);
@@ -69,10 +71,11 @@ public class PopMean extends AppCompatActivity {
 
         //Adds or removes a negative from the input box.
         negativeButtonPM2.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 String temp = inputTextExpected.getText().toString();
-                if (temp.matches("") == false) {
+                if (!temp.matches("")) {
                     outputText.setText("");
                     if (temp.charAt(0) != '-') {
                         inputTextExpected.setText("-" + temp);
@@ -88,10 +91,11 @@ public class PopMean extends AppCompatActivity {
 
         //Adds or removes a negative from the input box.
         negativeButtonPM3.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 String temp = inputStdDev.getText().toString();
-                if (temp.matches("") == false) {
+                if (!temp.matches("")) {
                     outputText.setText("");
                     if (temp.charAt(0) != '-') {
                         inputStdDev.setText("-" + temp);
@@ -107,10 +111,11 @@ public class PopMean extends AppCompatActivity {
 
         //Adds or removes a negative from the input box.
         negativeButtonPM4.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 String temp = inputCount.getText().toString();
-                if (temp.matches("") == false) {
+                if (!temp.matches("")) {
                     outputText.setText("");
                     if (temp.charAt(0) != '-') {
                         inputCount.setText("-" + temp);
@@ -143,34 +148,35 @@ public class PopMean extends AppCompatActivity {
         //Adds the value to the arraylist, calculates the answer, and provides a step-by-step
         //explanation of the process.
         addButtonPM.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 String tempStringExpected = inputTextExpected.getText().toString();
                 String tempStringMean = inputTextMean.getText().toString();
                 String tempStringStdDev = inputStdDev.getText().toString();
                 String tempStringCount = inputCount.getText().toString();
-                if (tempStringExpected.matches("") == false ||
-                        tempStringExpected.matches(".") == false ||
-                        tempStringMean.matches("") == false ||
-                        tempStringMean.matches(".") == false ||
-                        tempStringStdDev.matches("") == false ||
-                        tempStringStdDev.matches(".") == false ||
-                        tempStringCount.matches("") == false ||
-                        tempStringCount.matches(".") == false) {
-                    Double tempValueExpected = Double.parseDouble(tempStringExpected);
-                    Double tempValueMean = Double.parseDouble(tempStringMean);
-                    Double tempValueStdDev = Double.parseDouble(tempStringStdDev);
-                    int tempValueCount = Integer.parseInt(tempStringCount);
+                if (!tempStringExpected.equals("") ||
+                        !tempStringExpected.equals(".") ||
+                        !tempStringMean.equals("") ||
+                        !tempStringMean.equals(".") ||
+                        !tempStringStdDev.equals("") ||
+                        !tempStringStdDev.equals(".") ||
+                        !tempStringCount.equals("") ||
+                        !tempStringCount.equals(".")) {
+                    expected = Double.parseDouble(tempStringExpected);
+                    mean = Double.parseDouble(tempStringMean);
+                    stdDev = Double.parseDouble(tempStringStdDev);
+                    count = Integer.parseInt(tempStringCount);
 
-                    Double subtraction = tempValueMean - tempValueExpected;
-                    Double division = tempValueStdDev/((Double) Math.sqrt(count));
+                    Double subtraction = mean - expected;
+                    Double division = stdDev/((Double) Math.sqrt(count));
                     Double answer = subtraction / division;
 
                     outputText.setText("First, we must subtract the expected value from the mean," +
-                            " which gives us: " + tempValueMean + "-" + tempStringExpected
+                            " which gives us: " + mean + "-" + expected
                             + " = " + subtraction + "\nNext, we must divide the standard deviation" +
                             " from the square root of the number of values, which gives us: " +
-                            tempValueStdDev + "/√" + tempValueCount + " = " + division +
+                            stdDev + "/√" + count + " = " + division +
                             "\nFinally, we divide these two values together, giving us: " +
                             subtraction + "/" + division + " = " + answer);
                 } else {

@@ -45,7 +45,7 @@
         app:layout_constraintVertical_bias="0.039" />
 
     <ScrollView
-        android:id="@+id/scrollCC"
+        android:id="@+id/scrollSD"
         android:layout_width="411dp"
         android:layout_height="377dp"
         android:layout_marginTop="173dp"
@@ -73,13 +73,13 @@
         android:id="@+id/clearButtonSD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="40dp"
         android:text="Clear"
-        app:layout_constraintBottom_toTopOf="@+id/scrollCC"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.185"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.195"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.39" />
 
     <EditText
         android:id="@+id/inputTextValueSD"
@@ -118,8 +118,10 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/negativeButtonSD2"
         app:layout_constraintEnd_toStartOf="@+id/inputTextValueSD"
+        app:layout_constraintHorizontal_bias="0.718"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backButtonSD" />
+        app:layout_constraintTop_toBottomOf="@+id/backButtonSD"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/negativeButtonSD2"
@@ -127,11 +129,11 @@
         android:layout_height="wrap_content"
         android:text="+/-"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/clearButtonSD"
-        app:layout_constraintEnd_toStartOf="@+id/inputTextMeanSD"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backButtonSD"
-        app:layout_constraintVertical_bias="0.621" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.189" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
