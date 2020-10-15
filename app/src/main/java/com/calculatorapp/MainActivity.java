@@ -43,6 +43,10 @@ public class MainActivity extends AppCompatActivity {
         graphingCalc_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent graphingCalculatorScreen = new Intent(MainActivity.this,
+                                                graphingActivity.class);
+                startActivity(graphingCalculatorScreen);
+
                 //enter graphing calculator screen
             }
         });

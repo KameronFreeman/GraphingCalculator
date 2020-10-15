@@ -1,3 +1,5 @@
+include ':graphview-4.2.2'
+include ':graphview-4.2.2'
 include ':jfreechart-1.0.19'
 include ':jcommon-1.0.23'
 include ':app'
