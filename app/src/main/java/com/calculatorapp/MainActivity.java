@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.calculatorapp.GraphingCalcInputsActivity;
 import com.example.calculatorapp.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -43,9 +44,9 @@ public class MainActivity extends AppCompatActivity {
         graphingCalc_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent graphingCalculatorScreen = new Intent(MainActivity.this,
-                                                graphingActivity.class);
-                startActivity(graphingCalculatorScreen);
+                Intent graphingCalculatorInputScreen = new Intent(MainActivity.this,
+                                                GraphingCalcInputsActivity.class);
+                startActivity(graphingCalculatorInputScreen);
 
                 //enter graphing calculator screen
             }
