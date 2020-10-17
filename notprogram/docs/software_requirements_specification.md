@@ -13,10 +13,10 @@ The non functional requirements list how the program should run when interacted 
     2. Step-by-step shall output answers in a cohesive way so the user can understand how to do the calculation themselves.
     3. User shall be able to go back to other functions of the app from the step-by-step portion.
 3. Basic Calculator
-    1. Basic calculator needs to handle basic addition, subtraction, multiplication, and division manipulation of variable input by the user.
-    2. Equal button pressed by the user will update the display screen to output the answer.
+    1. Basic calculator shall handle basic addition, subtraction, multiplication, and division manipulation of variable input by the user.
+    2. Equal button pressed by the user shall update the display screen to output the answer.
 4. Menu
-    1. User must be able to press buttons on the menu screen to access different parts of the code.
+    1. User shall be able to press buttons on the menu screen to access different parts of the code.
 5. Calculus
     1. User shall input a function into a text-box.
     2. User shall select a calculus option (ex: 1st derivative, nth derivative...to be determined).
