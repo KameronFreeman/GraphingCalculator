@@ -36,7 +36,7 @@ The non functional requirements list how the program should run when interacted 
     1. User shall not be able to enter non-numbers into the input boxes for step-by-step.
 3. Basic Calculator
     1. Program shall be able to detect if an input is valid or invalid.
-    2. Basic calculator must have a shared display screen for user inputs and outputs.
+    2. Basic calculator shall have a shared display screen for user inputs and outputs.
 4. Menu
     1. Menu shall seemlessly move to and from different section of the program.
 5. Calculus
