@@ -105,19 +105,23 @@ public class SampleStdDev extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
+                //Gets string values from input boxes.
                 String tempStringValue = inputTextValue.getText().toString();
                 inputTextValue.setText("");
                 String tempStringMean = inputTextMean.getText().toString();
+                //Checks for invalid input.
                 if (!tempStringValue.equals("") ||
                         !tempStringValue.equals(".") ||
                         !tempStringMean.equals("") ||
                         !tempStringMean.equals(".")) {
+                    //Converts strings to numbers.
                     Double tempValueValue = Double.parseDouble(tempStringValue);
                     mean = Double.parseDouble(tempStringMean);
                     values.add(tempValueValue);
                     count++;
                     String formulaString = "";
                     Double sum = 0.0;
+                    //Calculates answer and generates repeatable string.
                     for (int i = 0; i < count; i++) {
                         if (i == count - 1) {
                             formulaString = formulaString + "(" + values.get(i) + "-" +
@@ -132,6 +136,7 @@ public class SampleStdDev extends AppCompatActivity {
                     Double preSquareRoot = sum / (count - 1);
                     Double answer = Math.sqrt(preSquareRoot);
 
+                    //Outputs answer.
                     outputTextSD.setText("First, we must take the sum of the answer to every" +
                             " value minus the mean squared. This gives us: " + formulaString +
                             "\nThen we must take the value taken from this (" + sum + ") " +

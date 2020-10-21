@@ -1,8 +1,10 @@
-package com.example.calculatorapp;
+package com.calculatorapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.calculatorapp.R;
 
 public class BasicCalculator extends AppCompatActivity {
 

@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GraphingCalcInputsActivity"></activity>
+        <activity android:name="com.calculatorapp.HyperGeoCalc"></activity>
+        <activity android:name="com.calculatorapp.GraphingCalcInputsActivity" />
         <activity android:name="com.calculatorapp.graphingActivity" />
         <activity android:name=".activity_calculus" />
-        <activity android:name=".BasicCalculator" />
+        <activity android:name="com.calculatorapp.BasicCalculator" />
         <activity android:name="com.calculatorapp.PopProp" />
         <activity android:name="com.calculatorapp.PopMean" />
         <activity android:name="com.calculatorapp.CorrelationCoeff" />

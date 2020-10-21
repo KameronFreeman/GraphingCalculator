@@ -13,6 +13,7 @@ import com.example.calculatorapp.R;
 
 public class TwoMeans extends AppCompatActivity {
 
+    //Initializes variables.
     private Double x1 = 0.0;
     private Double x2 = 0.0;
     private Double stdDev1 = 0.0;
@@ -200,13 +201,14 @@ public class TwoMeans extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
+                //Gets string values from input boxes.
                 String tempStringX1 = inputTextX1.getText().toString();
                 String tempStringX2 = inputTextX2.getText().toString();
                 String tempStringStdDev1 = inputTextStdDev1.getText().toString();
                 String tempStringStdDev2 = inputTextStdDev2.getText().toString();
                 String tempStringCount1 = inputTextCount1.getText().toString();
                 String tempStringCount2 = inputTextCount2.getText().toString();
-
+                //Checks for invalid input.
                 if (!tempStringX1.equals("") ||
                         !tempStringX1.equals(".") ||
                         !tempStringStdDev1.equals("") ||
@@ -219,21 +221,21 @@ public class TwoMeans extends AppCompatActivity {
                         !tempStringStdDev2.equals("") ||
                         !tempStringCount2.equals("") ||
                         !tempStringCount2.equals(".")) {
-
+                    //Converts string values into numbers.
                     x1 = Double.parseDouble(tempStringX1);
                     x2 = Double.parseDouble(tempStringX2);
                     stdDev1 = Double.parseDouble(tempStringStdDev1);
                     stdDev2 = Double.parseDouble(tempStringStdDev2);
                     count1 = Integer.parseInt(tempStringCount1);
                     count2 = Integer.parseInt(tempStringCount2);
-
+                    //Calculates answer.
                     Double subtraction = x1 - x2;
                     Double divisionOne = Math.pow(stdDev1, 2) / count1;
                     Double divisionTwo = Math.pow(stdDev2, 2) / count2;
                     Double addition = divisionOne + divisionTwo;
                     Double squareRoot = Math.sqrt(addition);
                     Double answer = subtraction / squareRoot;
-
+                    //Outputs answer.
                     outputText.setText("First, we must subtract the second mean from the first," +
                             " giving us: " + x1 + "-" + x2 + " = " + subtraction +
                             "\nNext, we must divide the two standard deviations from their " +

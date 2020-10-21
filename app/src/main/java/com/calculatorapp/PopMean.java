@@ -151,10 +151,12 @@ public class PopMean extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
+                //Gets string values from input boxes.
                 String tempStringExpected = inputTextExpected.getText().toString();
                 String tempStringMean = inputTextMean.getText().toString();
                 String tempStringStdDev = inputStdDev.getText().toString();
                 String tempStringCount = inputCount.getText().toString();
+                //Checks for invalid input.
                 if (!tempStringExpected.equals("") ||
                         !tempStringExpected.equals(".") ||
                         !tempStringMean.equals("") ||
@@ -163,15 +165,18 @@ public class PopMean extends AppCompatActivity {
                         !tempStringStdDev.equals(".") ||
                         !tempStringCount.equals("") ||
                         !tempStringCount.equals(".")) {
+                    //Converts strings to numbers.
                     expected = Double.parseDouble(tempStringExpected);
                     mean = Double.parseDouble(tempStringMean);
                     stdDev = Double.parseDouble(tempStringStdDev);
                     count = Integer.parseInt(tempStringCount);
 
+                    //Calculates answer.
                     Double subtraction = mean - expected;
                     Double division = stdDev/((Double) Math.sqrt(count));
                     Double answer = subtraction / division;
 
+                    //Outputs answer.
                     outputText.setText("First, we must subtract the expected value from the mean," +
                             " which gives us: " + mean + "-" + expected
                             + " = " + subtraction + "\nNext, we must divide the standard deviation" +

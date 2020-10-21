@@ -13,6 +13,7 @@ import com.example.calculatorapp.R;
 
 public class PopProp extends AppCompatActivity {
 
+    //Initializes variables.
     private Double ratio = 0.0;
     private Double pNull = 0.00;
     private int count = 0;
@@ -125,25 +126,30 @@ public class PopProp extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
+                //Gets string values from text boxes.
                 String tempStringRatio = inputTextRatio.getText().toString();
                 String tempStringNull = inputTextNull.getText().toString();
                 String tempStringCount = inputTextCount.getText().toString();
+                //Checks for invalid input.
                 if (!tempStringRatio.equals("") ||
                         !tempStringRatio.equals(".") ||
                         !tempStringNull.equals("") ||
                         !tempStringNull.equals(".") ||
                         !tempStringCount.equals("") ||
                         !tempStringCount.equals(".")) {
+                    //Converts strings to values.
                     ratio = Double.parseDouble(tempStringRatio);
                     pNull = Double.parseDouble(tempStringNull);
                     count = Integer.parseInt(tempStringCount);
 
+                    //Calculates answer.
                     Double subtraction = ratio - pNull;
                     Double multiplication = pNull * (1 - pNull);
                     Double divisionOne = multiplication / count;
                     Double squareRoot = Math.sqrt(divisionOne);
                     Double answer = subtraction / squareRoot;
 
+                    //Outputs answer.
                     outputText.setText("First, we must subtract the null value from the ratio," +
                             " which gives us: " + ratio + "-" + pNull + " = " + subtraction +
                             "\nNext, we must multiply the null value by one minus the null value," +

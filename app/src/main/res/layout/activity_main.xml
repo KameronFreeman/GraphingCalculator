@@ -17,56 +17,60 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.147" />
+        app:layout_constraintVertical_bias="0.076" />
 
-    <Button
-        android:id="@+id/basicCalc_Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
-        android:text="BASIC CALCULATOR"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menuLogo" />
-
-    <Button
-        android:id="@+id/stepByStep_Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="STEP BY STEP"
-        android:textSize="24sp"
+    <ScrollView
+        android:layout_width="381dp"
+        android:layout_height="561dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/basicCalc_Button"
-        app:layout_constraintVertical_bias="0.191" />
+        app:layout_constraintTop_toBottomOf="@+id/menuLogo">
 
-    <Button
-        android:id="@+id/graphingCalc_Button"
-        android:layout_width="226dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="52dp"
-        android:text="@string/graphing_calculator"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/stepByStep_Button" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="143dp"
-        android:layout_height="52dp"
-        android:text="Calculus"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/basicCalc_Button"
-        app:layout_constraintVertical_bias="0.521" />
+            <Button
+                android:id="@+id/basicCalc_Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Basic Calculator"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/stepByStep_Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="STEP BY STEP"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/graphingCalc_Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/graphing_calculator"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/calculusButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calculus"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/hgcButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hypergeometric Calculator"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.calculatorapp.GraphingCalcInputsActivity;
 import com.example.calculatorapp.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         Button basicCalc_Button = (Button) findViewById(R.id.basicCalc_Button);
         Button stepByStep_Button = (Button) findViewById(R.id.stepByStep_Button);
         Button graphingCalc_Button = (Button) findViewById(R.id.graphingCalc_Button);
+        Button hgcButton = (Button) findViewById(R.id.hgcButton);
 
         //if Basic Calc Button pressed ...
         basicCalc_Button.setOnClickListener(new View.OnClickListener() {
@@ -49,6 +49,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(graphingCalculatorInputScreen);
 
                 //enter graphing calculator screen
+            }
+        });
+
+        //if Hypergeometric Calculator Button pressed...
+        hgcButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Enter hypergeometric calculator screen.
+                Intent hgcIntent = new Intent(getApplicationContext(), HyperGeoCalc.class);
+                startActivity(hgcIntent);
             }
         });
     }

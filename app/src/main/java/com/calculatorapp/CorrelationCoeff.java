@@ -15,6 +15,7 @@ import java.util.ArrayList;
 
 public class CorrelationCoeff extends AppCompatActivity {
 
+    //Initializes variables.
     private ArrayList<Double> xValues = new ArrayList<>();
     private ArrayList<Double> yValues = new ArrayList<>();
     private int count = 0;
@@ -205,6 +206,7 @@ public class CorrelationCoeff extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
+                //Gets all values from the text boxes.
                 String tempStringValueX = inputXValueCC.getText().toString();
                 inputXValueCC.setText("");
                 String tempStringMeanX = inputXMeanCC.getText().toString();
@@ -213,6 +215,8 @@ public class CorrelationCoeff extends AppCompatActivity {
                 inputYValueCC.setText("");
                 String tempStringMeanY = inputYMeanCC.getText().toString();
                 String tempStringSY = inputSYCC.getText().toString();
+
+                //Checks for invalid input.
                 if (tempStringValueX.equals("") == false ||
                         tempStringValueX.equals(".") == false ||
                         tempStringMeanX.equals("") == false ||
@@ -225,6 +229,7 @@ public class CorrelationCoeff extends AppCompatActivity {
                         tempStringMeanY.equals("") == false ||
                         tempStringSY.equals("") == false ||
                         tempStringSY.equals(".") == false) {
+                    //Converts inputs to numbers.
                     Double tempValueValueX = Double.parseDouble(tempStringValueX);
                     meanX = Double.parseDouble(tempStringMeanX);
                     sX = Double.parseDouble(tempStringSX);
@@ -236,6 +241,7 @@ public class CorrelationCoeff extends AppCompatActivity {
                     count++;
                     String formulaString = "";
                     Double sum = 0.0;
+                    //Creates repeatable string and calculates the answer.
                     for (int i = 0; i < count; i++) {
                         if (i == count - 1) {
                             formulaString = formulaString + "((" + xValues.get(i) + "-" +
@@ -252,6 +258,7 @@ public class CorrelationCoeff extends AppCompatActivity {
 
                     double answer = sum * (1 / ((double) count - 1));
 
+                    //Outputs the answer.
                     outputTextCC.setText("First, we must take the sum of all of the values of x and" +
                             " y subtracted by their respective means, and then divided by sx X" +
                             " sy, which gives us: " + formulaString + " = " + sum +

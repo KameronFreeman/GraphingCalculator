@@ -1,4 +1,4 @@
-package com.example.calculatorapp;
+package com.calculatorapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.calculatorapp.graphingActivity;
+import com.example.calculatorapp.R;
 
 public class GraphingCalcInputsActivity extends AppCompatActivity {
     public static int m;

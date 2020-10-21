@@ -5,7 +5,7 @@
     android:id="@+id/linearyequals"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GraphingCalcInputsActivity">
+    tools:context="com.calculatorapp.GraphingCalcInputsActivity">
 
     <EditText
         android:id="@+id/linearEquationEditText"

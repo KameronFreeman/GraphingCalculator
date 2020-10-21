@@ -80,15 +80,19 @@ public class SampleMean extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
+                //Gets the text from the input box.
                 String tempString = inputTextSM.getText().toString();
                 inputTextSM.setText("");
+                //Checks for invalid input.
                 if (tempString.equals("") == false ||
                         tempString.equals(".") == false) {
+                    //Converts strings to numbers.
                     Double tempValue = Double.parseDouble(tempString);
                     values.add(tempValue);
                     count++;
                     String formulaString = "";
                     Double sum = 0.0;
+                    //Calculates answer and generates repeatable string.
                     for (int i = 0; i < count; i++) {
                         if (i == count - 1) {
                             formulaString = formulaString + values.get(i);
@@ -98,6 +102,7 @@ public class SampleMean extends AppCompatActivity {
                         sum += values.get(i);
                     }
                     Double mean = sum / count;
+                    //Outputs the answer.
                     outputTextSM.setText("First, we must add all of the given values together, " +
                             "which looks like: " + formulaString + " = " + sum +
                             "\nThen, we must divide it by the total number of values, which gives" +

@@ -15,7 +15,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="true">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../jcommon-1.0.23">
       <excludeFolder url="file://$MODULE_DIR$/../../../jcommon-1.0.23/.gradle" />
@@ -23,6 +23,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="Gradle: jcommon-1.0.23.jcommon-1.0.23" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: CalculatorApp.jcommon-1.0.23.jcommon-1.0.23" level="project" />
   </component>
 </module>
