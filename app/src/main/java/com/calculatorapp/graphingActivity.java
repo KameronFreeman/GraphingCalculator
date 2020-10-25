@@ -13,8 +13,8 @@ import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
 public class graphingActivity extends AppCompatActivity {
-    private int m = GraphingCalcInputsActivity.m;
-    private int b = GraphingCalcInputsActivity.b;
+    private double m = GraphingCalcInputsActivity.m;
+    private double b = GraphingCalcInputsActivity.b;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -11,8 +11,8 @@ import android.widget.EditText;
 import com.example.calculatorapp.R;
 
 public class GraphingCalcInputsActivity extends AppCompatActivity {
-    public static int m;
-    public static int b;
+    public static double m;
+    public static double b;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +27,39 @@ public class GraphingCalcInputsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                m = Integer.parseInt(linearEquation.getText().toString().substring(0,1));
-                int length = linearEquation.getText().toString().length();
-                b = Integer.parseInt(linearEquation.getText().toString().substring(length - 1));
+
+
+                String equation = linearEquation.getText().toString();
+                int indOfX = equation.indexOf('x');
+                if (Character.isDigit(equation.charAt(0)) || equation.charAt(0) == '.'){
+                    m = Double.parseDouble(equation.substring(0,indOfX));
+                }
+                if (equation.charAt(0) == '-'){
+                    m = -(Double.parseDouble(equation.substring(1,indOfX)));
+                }
+
+
+
+                int length = equation.length();
+
+                if (equation.substring(indOfX).indexOf('+') == -1){
+                    int mid = equation.substring(indOfX).indexOf('-') + indOfX;
+                    if (Character.isDigit(equation.charAt(mid +1)) || equation.charAt(mid + 1) == '.'){
+                        b = -(Double.parseDouble(equation.substring(mid+1)));
+                    }else{
+                        b = -(Double.parseDouble(equation.substring(mid+2)));
+                    }
+                }else{
+                    int mid = equation.substring(indOfX).indexOf('+') + indOfX;
+                    if (Character.isDigit(equation.charAt(mid+1)) || equation.charAt(mid+1) == '.'){
+                        b = Double.parseDouble(equation.substring(mid+1));
+                    }else{
+                        b = Double.parseDouble(equation.substring(mid+2));
+                    }
+                }
+
+
+                //b = Integer.parseInt(linearEquation.getText().toString().substring(length - 1));
 
 
                 Intent graphingCalculatorScreen = new Intent(GraphingCalcInputsActivity.this,
