@@ -4,6 +4,9 @@
       <root url="jar://$PROJECT_DIR$/graphview-4.2.2/build/.transforms/fa81eb29885cff76109a4b330c61bd21/jetified-graphview-4.2.2/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/graphview-4.2.2/build/.transforms/fa81eb29885cff76109a4b330c61bd21/jetified-graphview-4.2.2/res" />
       <root url="file://$PROJECT_DIR$/graphview-4.2.2/build/.transforms/fa81eb29885cff76109a4b330c61bd21/jetified-graphview-4.2.2/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/graphview-4.2.2/build/.transforms/e89bd20b7fa1876f069783edbab7943e/jetified-graphview-4.2.2/res" />
+      <root url="jar://$PROJECT_DIR$/graphview-4.2.2/build/.transforms/e89bd20b7fa1876f069783edbab7943e/jetified-graphview-4.2.2/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/graphview-4.2.2/build/.transforms/e89bd20b7fa1876f069783edbab7943e/jetified-graphview-4.2.2/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

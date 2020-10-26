@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.calculatorapp.HyperGeoCalc"></activity>
+        <activity android:name="com.calculatorapp.calculusActivity"></activity>
+        <activity android:name="com.calculatorapp.HyperGeoCalc" />
         <activity android:name="com.calculatorapp.GraphingCalcInputsActivity" />
         <activity android:name="com.calculatorapp.graphingActivity" />
         <activity android:name=".activity_calculus" />

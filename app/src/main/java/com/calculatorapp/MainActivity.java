@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         Button stepByStep_Button = (Button) findViewById(R.id.stepByStep_Button);
         Button graphingCalc_Button = (Button) findViewById(R.id.graphingCalc_Button);
         Button hgcButton = (Button) findViewById(R.id.hgcButton);
+        Button calcButton = (Button) findViewById(R.id.calculusButton);
 
         //if Basic Calc Button pressed ...
         basicCalc_Button.setOnClickListener(new View.OnClickListener() {
@@ -61,6 +62,17 @@ public class MainActivity extends AppCompatActivity {
                 //Enter hypergeometric calculator screen.
                 Intent hgcIntent = new Intent(getApplicationContext(), HyperGeoCalc.class);
                 startActivity(hgcIntent);
+            }
+        });
+
+
+        //if Calculus Button pressed ...
+        calcButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //enter the calculus screen
+                Intent calcIntent = new Intent(getApplicationContext(), calculusActivity.class );
+                startActivity(calcIntent);
             }
         });
     }
