@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.calculatorapp.R;
 
@@ -20,9 +21,8 @@ public class BasicCalculator extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_basic_calculator);
 
-
         //button variables
-        Button oneButtonBC = (Button) findViewById(R.id.oneButtonBC);
+        Button oneButtonBC = (Button) findViewById(R.id.zeroButtonBC);
         Button twoButtonBC = (Button) findViewById(R.id.twoButtonBC);
         Button threeButtonBC = (Button) findViewById(R.id.threeButtonBC);
         Button fourButtonBC = (Button) findViewById(R.id.fourButtonBC);
@@ -41,12 +41,23 @@ public class BasicCalculator extends AppCompatActivity {
         Button multiplyButtonBC = (Button) findViewById(R.id.multiplyButtonBC);
         Button divideButtonBC = (Button) findViewById(R.id.divideButtonBC);
 
+        //initialize text box
+        final TextView textOutputBC = (TextView) findViewById(R.id.textOutputBC);
+
+        //if back button pressed ... return to main menu
+        backButtonBC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mainIntent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(mainIntent);
+            }
+        });
 
         //if one button pressed ...
         oneButtonBC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                textOutputBC.setText("1");
             }
         });
 
@@ -124,14 +135,6 @@ public class BasicCalculator extends AppCompatActivity {
 
         //if decimal button pressed ...
         decimalButtonBC.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-        //if back button pressed ... return to main menu
-        backButtonBC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

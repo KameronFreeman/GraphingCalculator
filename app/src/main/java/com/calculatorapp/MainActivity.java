@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //enter the basic calculator screen
+                Intent bcIntent = new Intent(getApplicationContext(), BasicCalculator.class );
+                startActivity(bcIntent);
             }
         });
 
