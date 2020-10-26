@@ -11,18 +11,20 @@ import android.widget.TextView;
 import com.example.calculatorapp.R;
 
 public class BasicCalculator extends AppCompatActivity {
-    // Logic: create a string of input characters based on button clicks for computations
-    // if 0-9 or decimal pressed, add them to screen
-    // if
 
+    //NEXT UPDATE: Revamp xml screen, fix leading zeros
+
+    float one, two;
+    boolean Add, Sub, Multi, Div;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_basic_calculator);
 
+
         //button variables
-        Button oneButtonBC = (Button) findViewById(R.id.zeroButtonBC);
+        Button oneButtonBC = (Button) findViewById(R.id.oneButtonBC);
         Button twoButtonBC = (Button) findViewById(R.id.twoButtonBC);
         Button threeButtonBC = (Button) findViewById(R.id.threeButtonBC);
         Button fourButtonBC = (Button) findViewById(R.id.fourButtonBC);
@@ -57,7 +59,7 @@ public class BasicCalculator extends AppCompatActivity {
         oneButtonBC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textOutputBC.setText("1");
+                textOutputBC.setText(textOutputBC.getText()+"1");
             }
         });
 
@@ -65,7 +67,7 @@ public class BasicCalculator extends AppCompatActivity {
         twoButtonBC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                textOutputBC.setText(textOutputBC.getText()+"2");
             }
         });
 
@@ -73,7 +75,7 @@ public class BasicCalculator extends AppCompatActivity {
         threeButtonBC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                textOutputBC.setText(textOutputBC.getText()+"3");
             }
         });
 
@@ -81,7 +83,7 @@ public class BasicCalculator extends AppCompatActivity {
         fourButtonBC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                textOutputBC.setText(textOutputBC.getText()+"4");
             }
         });
 
@@ -89,7 +91,7 @@ public class BasicCalculator extends AppCompatActivity {
         fiveButtonBC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                textOutputBC.setText(textOutputBC.getText()+"5");
             }
         });
 
@@ -97,7 +99,7 @@ public class BasicCalculator extends AppCompatActivity {
         sixButtonBC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                textOutputBC.setText(textOutputBC.getText()+"6");
             }
         });
 
@@ -105,7 +107,7 @@ public class BasicCalculator extends AppCompatActivity {
         sevenButtonBC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                textOutputBC.setText(textOutputBC.getText()+"7");
             }
         });
 
@@ -113,7 +115,7 @@ public class BasicCalculator extends AppCompatActivity {
         eightButtonBC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                textOutputBC.setText(textOutputBC.getText()+"8");
             }
         });
 
@@ -121,7 +123,7 @@ public class BasicCalculator extends AppCompatActivity {
         nineButtonBC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                textOutputBC.setText(textOutputBC.getText()+"9");
             }
         });
 
@@ -129,7 +131,8 @@ public class BasicCalculator extends AppCompatActivity {
         zeroButtonBC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                if(textOutputBC.getText() == "0"); //no repeating zeros
+                else textOutputBC.setText(textOutputBC.getText()+"0");
             }
         });
 
@@ -137,23 +140,15 @@ public class BasicCalculator extends AppCompatActivity {
         decimalButtonBC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                textOutputBC.setText(textOutputBC.getText()+".");
             }
         });
 
-        //if clear button pressed ... clear screen
+        //if clear button pressed ...
         clearButtonBC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-            }
-        });
-
-        //if total button pressed ...
-        totalButtonBC.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
+                textOutputBC.setText("");
             }
         });
 
@@ -161,7 +156,12 @@ public class BasicCalculator extends AppCompatActivity {
         addButtonBC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                if(textOutputBC == null) textOutputBC.setText("");
+                else {
+                    one = Float.parseFloat(textOutputBC.getText()+"");
+                    Add = true;
+                    textOutputBC.setText(null);
+                }
             }
         });
 
@@ -169,7 +169,9 @@ public class BasicCalculator extends AppCompatActivity {
         subtractButtonBC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                one = Float.parseFloat(textOutputBC.getText() + "");
+                Sub = true;
+                textOutputBC.setText(null);
             }
         });
 
@@ -177,7 +179,9 @@ public class BasicCalculator extends AppCompatActivity {
         multiplyButtonBC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                one = Float.parseFloat(textOutputBC.getText() + "");
+                Multi = true;
+                textOutputBC.setText(null);
             }
         });
 
@@ -185,7 +189,34 @@ public class BasicCalculator extends AppCompatActivity {
         divideButtonBC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                one = Float.parseFloat(textOutputBC.getText() + "");
+                Div = true;
+                textOutputBC.setText(null);
+            }
+        });
 
+        //if total button pressed ...
+        totalButtonBC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                two = Float.parseFloat(textOutputBC.getText() + "");
+
+                if(Add == true){
+                    textOutputBC.setText(one + two + "");
+                    Add = false;
+                }
+                if(Sub == true){
+                    textOutputBC.setText(one - two + "");
+                    Sub = false;
+                }
+                if(Multi == true){
+                    textOutputBC.setText(one * two + "");
+                    Multi = false;
+                }
+                if(Div == true){
+                    textOutputBC.setText(one / two + "");
+                    Div = false;
+                }
             }
         });
     }
