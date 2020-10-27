@@ -42,9 +42,9 @@
 ### Calculus
 * Description: Allows the user to enter calculus functions in which the app solves the derivative for them.
 * Expected Time to Complete: 3-4 weeks
-* Responsible person(s): Jacob Lockwood
+* Responsible person(s): Jacob Lockwood & Donovan Heynen
 
 ### Step-by-Step
 * Description: Adds more equations to solve with detailed explanations.
-* Expected Time to Complete: Before final ship date.
+* Expected Time to Complete: Before final ship date (TBD).
 * Responsible person(s): Alexander Klein
