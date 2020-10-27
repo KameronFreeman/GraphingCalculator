@@ -48,3 +48,8 @@
 * Description: Adds more equations to solve with detailed explanations.
 * Expected Time to Complete: Before final ship date (TBD).
 * Responsible person(s): Alexander Klein
+
+### Menu/App Overview
+* Description: Create a sleek, more appealing format for the menu and app pages to follow
+* Expected Time to Complete: Before final ship date (TBD).
+* Responsible person(s): Donovan Heyen
