@@ -4,27 +4,27 @@
 
 ### Menu Navigation
 * Description: Seamlessly transitions from function to function.
-* Expected Time to Complete: 1-5 weeks (constantly changing)
+* Time Completed In: 1-5 weeks (constantly changing)
 * Responsible person(s): Everyone
 
 ### Step-by-Step
 * Description: Provides a step-by-step explanation on how to solve certain mathematical formulas.
-* Expected Time to Complete: 2-4 weeks
+* Time Completed In: 1-2 weeks
 * Responsible person(s): Alexander Klein
 
 ### Hypergeometric Calculator
 * Description: Calculates the odds of drawing a certain card from a deck within a certain number of turns.
-* Expected Time to Complete: 2-3 weeks
+* Time Completed In: 1 week
 * Responsible person(s): Alexander Klein
 
 ### Graphing Calculator (Linear Functions)
 * Description: Allows a user to enter a linear function and have the app graph it out.
-* Expected Time to Complete: 1-2 weeks
+* Time Completed In: 1-2 weeks
 * Responsible person(s): Kameron Freeman
 
 ### Basic Calculator
 * Description: Does simple addition, subtraction, multiplication, and division.
-* Expected Time to Complete: 1-2 weeks
+* Time Completed In: 1-2 weeks
 * Responsible person(s): Donovan Heynen
 
 ## Incomplete Tasks
