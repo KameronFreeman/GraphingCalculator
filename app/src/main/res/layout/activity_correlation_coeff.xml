@@ -63,85 +63,80 @@
         android:layout_marginStart="16dp"
         android:layout_marginBottom="40dp"
         android:text="Clear"
-        app:layout_constraintBottom_toTopOf="@+id/scrollCC"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintHorizontal_bias="0.182"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.749" />
 
     <EditText
         android:id="@+id/inputXValueCC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:layout_marginBottom="432dp"
         android:ems="10"
         android:hint="Enter X Value"
         android:inputType="numberDecimal"
-        app:layout_constraintBottom_toTopOf="@+id/scrollCC"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.781"
+        app:layout_constraintHorizontal_bias="0.786"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textStdDev"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.082" />
 
     <Button
         android:id="@+id/negativeButtonCC2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="376dp"
         android:text="+/-"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/scrollCC"
-        app:layout_constraintEnd_toStartOf="@+id/inputTextValueSD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backButtonSD" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.21" />
 
     <EditText
         android:id="@+id/inputXMeanCC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="376dp"
         android:ems="10"
         android:hint="Enter X Mean"
         android:inputType="numberDecimal"
-        app:layout_constraintBottom_toTopOf="@+id/scrollCC"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.781"
+        app:layout_constraintHorizontal_bias="0.796"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputTextValueSD"
-        app:layout_constraintVertical_bias="0.144" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.217" />
 
     <Button
         android:id="@+id/negativeButtonCC1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="432dp"
         android:text="+/-"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/scrollCC"
-        app:layout_constraintEnd_toStartOf="@+id/inputTextMeanSD"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backButtonSD"
-        app:layout_constraintVertical_bias="0.621" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.117" />
 
     <TextView
         android:id="@+id/textCorrCoeff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="68dp"
         android:text="Correlation Coefficient"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.43"
-        app:layout_constraintStart_toEndOf="@+id/backButtonSM"
+        app:layout_constraintHorizontal_bias="0.772"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.036" />
+        app:layout_constraintVertical_bias="0.039" />
 
     <EditText
         android:id="@+id/inputSXCC"
@@ -150,12 +145,12 @@
         android:ems="10"
         android:hint="Enter S_X"
         android:inputType="numberDecimal"
-        app:layout_constraintBottom_toTopOf="@+id/inputYValueCC"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.367"
-        app:layout_constraintStart_toEndOf="@+id/negativeButtonCC3"
-        app:layout_constraintTop_toBottomOf="@+id/inputXMeanCC"
-        app:layout_constraintVertical_bias="0.428" />
+        app:layout_constraintHorizontal_bias="0.791"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.303" />
 
     <EditText
         android:id="@+id/inputYValueCC"
@@ -164,12 +159,12 @@
         android:ems="10"
         android:hint="Enter Y Value"
         android:inputType="numberDecimal"
-        app:layout_constraintBottom_toTopOf="@+id/inputYMeanCC"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.391"
-        app:layout_constraintStart_toEndOf="@+id/negativeButtonCC4"
-        app:layout_constraintTop_toBottomOf="@+id/inputXMeanCC"
-        app:layout_constraintVertical_bias="0.828" />
+        app:layout_constraintHorizontal_bias="0.791"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.377" />
 
     <EditText
         android:id="@+id/inputYMeanCC"
@@ -205,12 +200,12 @@
         android:layout_height="wrap_content"
         android:text="+/-"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/negativeButtonCC4"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/negativeButtonCC2"
-        app:layout_constraintVertical_bias="0.529" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.297" />
 
     <Button
         android:id="@+id/negativeButtonCC4"
@@ -218,12 +213,12 @@
         android:layout_height="wrap_content"
         android:text="+/-"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/negativeButtonCC5"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/negativeButtonCC2"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.121" />
 
     <Button
         android:id="@+id/negativeButtonCC5"
@@ -236,7 +231,7 @@
         app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.447" />
+        app:layout_constraintVertical_bias="0.457" />
 
     <Button
         android:id="@+id/negativeButtonCC6"
