@@ -12,24 +12,24 @@
         android:layout_height="wrap_content"
         android:text="Sample Mean"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/inputTextSM"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.431"
-        app:layout_constraintStart_toEndOf="@+id/backButtonSM"
+        app:layout_constraintHorizontal_bias="0.761"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.036" />
+        app:layout_constraintVertical_bias="0.1" />
 
     <Button
         android:id="@+id/backButtonSM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Back"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/negativeButtonSM"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.123"
+        app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.06" />
 
     <EditText
         android:id="@+id/inputTextSM"
@@ -38,12 +38,12 @@
         android:ems="10"
         android:hint="Enter Values"
         android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/addButtonSM"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.721"
+        app:layout_constraintHorizontal_bias="0.756"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.144" />
+        app:layout_constraintVertical_bias="0.912" />
 
     <Button
         android:id="@+id/negativeButtonSM"
@@ -51,26 +51,25 @@
         android:layout_height="wrap_content"
         android:text="+/-"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/inputTextSM"
-        app:layout_constraintHorizontal_bias="0.689"
+        app:layout_constraintBottom_toTopOf="@+id/clearButtonSM"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.148"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backButtonSM"
-        app:layout_constraintVertical_bias="0.047" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.928" />
 
     <Button
         android:id="@+id/clearButtonSM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="44dp"
         android:text="Clear"
-        app:layout_constraintBottom_toTopOf="@+id/scrollCC"
+        app:layout_constraintBottom_toTopOf="@+id/scrollSM"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.218"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/negativeButtonSM"
-        app:layout_constraintVertical_bias="0.006" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.885" />
 
     <Button
         android:id="@+id/addButtonSM"
@@ -78,24 +77,23 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:text="Add"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/scrollSM"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.789"
+        app:layout_constraintHorizontal_bias="0.778"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputTextSM"
-        app:layout_constraintVertical_bias="0.087" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.885" />
 
     <ScrollView
         android:id="@+id/scrollSM"
-        android:layout_width="411dp"
-        android:layout_height="377dp"
+        android:layout_width="387dp"
+        android:layout_height="229dp"
         android:layout_marginTop="173dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputTextSM"
-        app:layout_constraintVertical_bias="0.894">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.951">
 
         <LinearLayout
             android:layout_width="match_parent"
