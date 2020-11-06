@@ -10,14 +10,14 @@
         android:id="@+id/backBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
+        android:layout_marginTop="60dp"
         android:text="Back"
         app:layout_constraintBottom_toTopOf="@+id/InputEditText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintHorizontal_bias="0.244"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.789" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/graphBtn"
@@ -26,10 +26,10 @@
         android:text="Graph"
         app:layout_constraintBottom_toTopOf="@+id/InputEditText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.743"
+        app:layout_constraintHorizontal_bias="0.73"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.548" />
+        app:layout_constraintVertical_bias="0.705" />
 
     <Button
         android:id="@+id/dervBtn"
@@ -55,28 +55,29 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.717" />
 
-    <TextView
-        android:id="@+id/solutionTextView"
-        android:layout_width="208dp"
-        android:layout_height="149dp"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/InputEditText"
+        android:layout_width="283dp"
+        android:layout_height="59dp"
+        android:gravity="center_horizontal"
+        android:hint="x^2"
         app:layout_constraintBottom_toTopOf="@+id/dervBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.842" />
+        app:layout_constraintVertical_bias="0.372" />
 
-    <EditText
-        android:id="@+id/InputEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="f(x)=x^2"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/solutionTextView"
+    <TextView
+        android:id="@+id/solutionTextView"
+        android:layout_width="226dp"
+        android:layout_height="75dp"
+        android:gravity="center_horizontal"
+        android:text="Please enter a function and select an operation"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.786" />
+        app:layout_constraintVertical_bias="0.414" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
