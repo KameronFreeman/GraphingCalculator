@@ -6,12 +6,14 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.calculatorapp.R;
 
-public class TwoMeans extends AppCompatActivity {
+public class Mean2 extends AppCompatActivity {
 
     //Initializes variables.
     private Double x1 = 0.0;
@@ -24,27 +26,32 @@ public class TwoMeans extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_two_means);
+        setContentView(R.layout.activity_mean2);
+
+        //Prevents keyboard from pushing layout up regardless of constraints
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 
         //Initialize Buttons.
-        Button backButton = (Button) findViewById(R.id.backButtonTM);
-        final Button addButton = (Button) findViewById(R.id.addButtonTM);
-        Button clearButton = (Button) findViewById(R.id.clearButtonTM);
-        Button negativeButton1 = (Button) findViewById(R.id.negativeButtonTM1);
-        Button negativeButton2 = (Button) findViewById(R.id.negativeButtonTM2);
-        Button negativeButton3 = (Button) findViewById(R.id.negativeButtonTM3);
-        Button negativeButton4 = (Button) findViewById(R.id.negativeButtonTM4);
-        Button negativeButton5 = (Button) findViewById(R.id.negativeButtonTM5);
-        Button negativeButton6 = (Button) findViewById(R.id.negativeButtonTM6);
+        Button backButton = (Button) findViewById(R.id.backButtonTM2);
+        Button addButton = (Button) findViewById(R.id.addButtonTM2);
+        Button clearButton = (Button) findViewById(R.id.clearButtonTM2);
+
+        Button negativeButton1 = (Button) findViewById(R.id.negativeButtonTM9);
+        Button negativeButton2 = (Button) findViewById(R.id.negativeButtonTM);
+        Button negativeButton3 = (Button) findViewById(R.id.negativeButtonTM8);
+        Button negativeButton4 = (Button) findViewById(R.id.negativeButtonTM7);
+        Button negativeButton5 = (Button) findViewById(R.id.negativeButtonTM11);
+        Button negativeButton6 = (Button) findViewById(R.id.negativeButtonTM10);
 
         //Initialize Text Boxes.
-        final TextView outputText = (TextView) findViewById(R.id.outputTextTM);
-        final TextView inputTextX1 = (TextView) findViewById(R.id.inputX1TM);
-        final TextView inputTextX2 = (TextView) findViewById(R.id.inputX2TM);
-        final TextView inputTextStdDev1 = (TextView) findViewById(R.id.inputStdDevTM1);
-        final TextView inputTextStdDev2 = (TextView) findViewById(R.id.inputStdDevTM2);
-        final TextView inputTextCount1 = (TextView) findViewById(R.id.inputCountTM1);
-        final TextView inputTextCount2 = (TextView) findViewById(R.id.inputCountTM2);
+        final TextView outputText = (TextView) findViewById(R.id.outputTextTM2);
+
+        final EditText inputTextX1 = (EditText) findViewById(R.id.inputX1TM3);
+        final EditText inputTextX2 = (EditText) findViewById(R.id.inputX2TM2);
+        final EditText inputTextStdDev1 = (EditText) findViewById(R.id.inputStdDevTM);
+        final EditText inputTextStdDev2 = (EditText) findViewById(R.id.inputStdDevTM3);
+        final EditText inputTextCount1 = (EditText) findViewById(R.id.inputCountTM);
+        final EditText inputTextCount2 = (EditText) findViewById(R.id.inputCountTM3);
 
         //Returns to the step-by-step menu.
         backButton.setOnClickListener(new View.OnClickListener() {
@@ -259,5 +266,6 @@ public class TwoMeans extends AppCompatActivity {
                 }
             }
         });
+
     }
 }

@@ -84,7 +84,7 @@ public class StepbystepMenu extends AppCompatActivity {
         twoMeanDiffButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent diffIntent = new Intent(getApplicationContext(), TwoMeans.class);
+                Intent diffIntent = new Intent(getApplicationContext(), Mean2.class);
                 startActivity(diffIntent);
             }
         });
