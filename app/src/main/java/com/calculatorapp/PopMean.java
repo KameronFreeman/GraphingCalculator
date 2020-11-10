@@ -155,20 +155,20 @@ public class PopMean extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                //Gets string values from input boxes.
-                String tempStringExpected = inputTextExpected.getText().toString();
-                String tempStringMean = inputTextMean.getText().toString();
-                String tempStringStdDev = inputStdDev.getText().toString();
-                String tempStringCount = inputCount.getText().toString();
                 //Checks for invalid input.
-                if (!tempStringExpected.equals("") ||
-                        !tempStringExpected.equals(".") ||
-                        !tempStringMean.equals("") ||
-                        !tempStringMean.equals(".") ||
-                        !tempStringStdDev.equals("") ||
-                        !tempStringStdDev.equals(".") ||
-                        !tempStringCount.equals("") ||
-                        !tempStringCount.equals(".")) {
+                if (!inputTextExpected.getText().toString().equals("") ||
+                        !inputTextExpected.getText().toString().equals(".") ||
+                        !inputTextMean.getText().toString().equals("") ||
+                        !inputTextMean.getText().toString().equals(".") ||
+                        !inputStdDev.getText().toString().equals("") ||
+                        !inputStdDev.getText().toString().equals(".") ||
+                        !inputCount.getText().toString().equals("") ||
+                        !inputCount.getText().toString().equals(".")) {
+                    //Gets string values from input boxes.
+                    String tempStringExpected = inputTextExpected.getText().toString();
+                    String tempStringMean = inputTextMean.getText().toString();
+                    String tempStringStdDev = inputStdDev.getText().toString();
+                    String tempStringCount = inputCount.getText().toString();
                     //Converts strings to numbers.
                     expected = Double.parseDouble(tempStringExpected);
                     mean = Double.parseDouble(tempStringMean);

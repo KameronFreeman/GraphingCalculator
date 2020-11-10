@@ -208,26 +208,26 @@ public class Mean2 extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                //Gets string values from input boxes.
-                String tempStringX1 = inputTextX1.getText().toString();
-                String tempStringX2 = inputTextX2.getText().toString();
-                String tempStringStdDev1 = inputTextStdDev1.getText().toString();
-                String tempStringStdDev2 = inputTextStdDev2.getText().toString();
-                String tempStringCount1 = inputTextCount1.getText().toString();
-                String tempStringCount2 = inputTextCount2.getText().toString();
                 //Checks for invalid input.
-                if (!tempStringX1.equals("") ||
-                        !tempStringX1.equals(".") ||
-                        !tempStringStdDev1.equals("") ||
-                        !tempStringStdDev1.equals(".") ||
-                        !tempStringCount1.equals("") ||
-                        !tempStringCount1.equals(".") ||
-                        !tempStringX2.equals("") ||
-                        !tempStringX2.equals(".") ||
-                        !tempStringStdDev2.equals(".") ||
-                        !tempStringStdDev2.equals("") ||
-                        !tempStringCount2.equals("") ||
-                        !tempStringCount2.equals(".")) {
+                if (!inputTextX1.getText().toString().equals("") ||
+                        !inputTextX1.getText().toString().equals(".") ||
+                        !inputTextStdDev1.getText().toString().equals("") ||
+                        !inputTextStdDev1.getText().toString().equals(".") ||
+                        !inputTextCount1.getText().toString().equals("") ||
+                        !inputTextCount1.getText().toString().equals(".") ||
+                        !inputTextX2.getText().toString().equals("") ||
+                        !inputTextX2.getText().toString().equals(".") ||
+                        !inputTextStdDev2.getText().toString().equals(".") ||
+                        !inputTextStdDev2.getText().toString().equals("") ||
+                        !inputTextCount2.getText().toString().equals("") ||
+                        !inputTextCount2.getText().toString().equals(".")) {
+                    //Gets string values from input boxes.
+                    String tempStringX1 = inputTextX1.getText().toString();
+                    String tempStringX2 = inputTextX2.getText().toString();
+                    String tempStringStdDev1 = inputTextStdDev1.getText().toString();
+                    String tempStringStdDev2 = inputTextStdDev2.getText().toString();
+                    String tempStringCount1 = inputTextCount1.getText().toString();
+                    String tempStringCount2 = inputTextCount2.getText().toString();
                     //Converts string values into numbers.
                     x1 = Double.parseDouble(tempStringX1);
                     x2 = Double.parseDouble(tempStringX2);
@@ -239,9 +239,9 @@ public class Mean2 extends AppCompatActivity {
                     Double subtraction = x1 - x2;
                     Double divisionOne = Math.pow(stdDev1, 2) / count1;
                     Double divisionTwo = Math.pow(stdDev2, 2) / count2;
-                    Double addition = divisionOne + divisionTwo;
+                    double addition = divisionOne + divisionTwo;
                     Double squareRoot = Math.sqrt(addition);
-                    Double answer = subtraction / squareRoot;
+                    double answer = subtraction / squareRoot;
                     //Outputs answer.
                     outputText.setText("First, we must subtract the second mean from the first," +
                             " giving us: " + x1 + "-" + x2 + " = " + subtraction +

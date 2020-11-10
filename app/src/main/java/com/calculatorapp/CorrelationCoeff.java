@@ -210,29 +210,28 @@ public class CorrelationCoeff extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                //Gets all values from the text boxes.
-                String tempStringValueX = inputXValueCC.getText().toString();
-                inputXValueCC.setText("");
-                String tempStringMeanX = inputXMeanCC.getText().toString();
-                String tempStringSX = inputSXCC.getText().toString();
-                String tempStringValueY = inputYValueCC.getText().toString();
-                inputYValueCC.setText("");
-                String tempStringMeanY = inputYMeanCC.getText().toString();
-                String tempStringSY = inputSYCC.getText().toString();
-
                 //Checks for invalid input.
-                if (tempStringValueX.equals("") == false ||
-                        tempStringValueX.equals(".") == false ||
-                        tempStringMeanX.equals("") == false ||
-                        tempStringMeanX.equals(".") == false ||
-                        tempStringSX.equals("") == false ||
-                        tempStringSX.equals(".") == false ||
-                        tempStringValueY.equals("") == false ||
-                        tempStringValueY.equals(".") == false ||
-                        tempStringMeanY.equals(".") == false ||
-                        tempStringMeanY.equals("") == false ||
-                        tempStringSY.equals("") == false ||
-                        tempStringSY.equals(".") == false) {
+                if (!inputXValueCC.getText().toString().equals("") ||
+                        !inputXValueCC.getText().toString().equals(".") ||
+                        !inputXMeanCC.getText().toString().equals("") ||
+                        !inputXMeanCC.getText().toString().equals(".") ||
+                        !inputSXCC.getText().toString().equals("") ||
+                        !inputSXCC.getText().toString().equals(".") ||
+                        !inputYValueCC.getText().toString().equals("") ||
+                        !inputYValueCC.getText().toString().equals(".") ||
+                        !inputYMeanCC.getText().toString().equals(".") ||
+                        !inputYMeanCC.getText().toString().equals("") ||
+                        !inputSYCC.getText().toString().equals("") ||
+                        !inputSYCC.getText().toString().equals(".")) {
+                    //Gets all values from the text boxes.
+                    String tempStringValueX = inputXValueCC.getText().toString();
+                    inputXValueCC.setText("");
+                    String tempStringMeanX = inputXMeanCC.getText().toString();
+                    String tempStringSX = inputSXCC.getText().toString();
+                    String tempStringValueY = inputYValueCC.getText().toString();
+                    inputYValueCC.setText("");
+                    String tempStringMeanY = inputYMeanCC.getText().toString();
+                    String tempStringSY = inputSYCC.getText().toString();
                     //Converts inputs to numbers.
                     Double tempValueValueX = Double.parseDouble(tempStringValueX);
                     meanX = Double.parseDouble(tempStringMeanX);

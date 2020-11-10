@@ -130,17 +130,17 @@ public class PopProp extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                //Gets string values from text boxes.
-                String tempStringRatio = inputTextRatio.getText().toString();
-                String tempStringNull = inputTextNull.getText().toString();
-                String tempStringCount = inputTextCount.getText().toString();
                 //Checks for invalid input.
-                if (!tempStringRatio.equals("") ||
-                        !tempStringRatio.equals(".") ||
-                        !tempStringNull.equals("") ||
-                        !tempStringNull.equals(".") ||
-                        !tempStringCount.equals("") ||
-                        !tempStringCount.equals(".")) {
+                if (!inputTextRatio.getText().toString().equals("") ||
+                        !inputTextRatio.getText().toString().equals(".") ||
+                        !inputTextNull.getText().toString().equals("") ||
+                        !inputTextNull.getText().toString().equals(".") ||
+                        !inputTextCount.getText().toString().equals("") ||
+                        !inputTextCount.getText().toString().equals(".")) {
+                    //Gets string values from text boxes.
+                    String tempStringRatio = inputTextRatio.getText().toString();
+                    String tempStringNull = inputTextNull.getText().toString();
+                    String tempStringCount = inputTextCount.getText().toString();
                     //Converts strings to values.
                     ratio = Double.parseDouble(tempStringRatio);
                     pNull = Double.parseDouble(tempStringNull);
@@ -148,10 +148,10 @@ public class PopProp extends AppCompatActivity {
 
                     //Calculates answer.
                     Double subtraction = ratio - pNull;
-                    Double multiplication = pNull * (1 - pNull);
-                    Double divisionOne = multiplication / count;
+                    double multiplication = pNull * (1 - pNull);
+                    double divisionOne = multiplication / count;
                     Double squareRoot = Math.sqrt(divisionOne);
-                    Double answer = subtraction / squareRoot;
+                    double answer = subtraction / squareRoot;
 
                     //Outputs answer.
                     outputText.setText("First, we must subtract the null value from the ratio," +

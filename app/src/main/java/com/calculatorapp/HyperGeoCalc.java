@@ -48,22 +48,23 @@ public class HyperGeoCalc extends AppCompatActivity {
                 //Creates proper decimal format.
                 DecimalFormat df = new DecimalFormat("0.00");
 
-                //Gets the values from the input boxes.
-                String deckString = deckInput.getText().toString();
-                String copyString = copiesInput.getText().toString();
-                String turnString = turnsInput.getText().toString();
-                //Clears the input boxes.
-                deckInput.setText("");
-                copiesInput.setText("");
-                turnsInput.setText("");
-
                 //Checks for no input.
-                if (!deckString.equals("") || !copyString.equals("") || !turnString.equals("")) {
-                    //Converts inputs into calculatable values and initializes other variables.
+                if (!deckInput.getText().toString().equals("") ||
+                        !copiesInput.getText().toString().equals("") ||
+                        !turnsInput.getText().toString().equals("")) {
+                    //Gets the values from the input boxes.
+                    String deckString = deckInput.getText().toString();
+                    String copyString = copiesInput.getText().toString();
+                    String turnString = turnsInput.getText().toString();
+                    //Clears the input boxes.
+                    deckInput.setText("");
+                    copiesInput.setText("");
+                    turnsInput.setText("");
+                    //Converts inputs into calculable values and initializes other variables.
                     double deckValue = Double.parseDouble(deckString);
                     double copyValue = Double.parseDouble(copyString);
                     double turnValue = Double.parseDouble(turnString);
-                    double percentage = 0.0;
+                    double percentage;
                     double numerator = deckValue - copyValue;
                     double denominator = deckValue;
 

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.calculatorapp.QuadraticActivity;
 import com.example.calculatorapp.R;
 
 import android.os.Bundle;
@@ -25,6 +26,7 @@ public class StepbystepMenu extends AppCompatActivity {
         Button popMeanButton = (Button) findViewById(R.id.popMeanButton);
         Button popPropButton = (Button) findViewById(R.id.popPropButton);
         Button twoMeanDiffButton = (Button) findViewById(R.id.twoMeanDiffButton);
+        Button quadraticButton = (Button) findViewById(R.id.quadraticButton);
 
         //Goes back to the main page.
         backButton.setOnClickListener(new View.OnClickListener() {
@@ -88,5 +90,14 @@ public class StepbystepMenu extends AppCompatActivity {
                 startActivity(diffIntent);
             }
         });
+
+        //Enters the Quadratic Formula view.
+        quadraticButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent quadIntent = new Intent(getApplicationContext(), QuadraticActivity.class);
+                startActivity(quadIntent);
+            }
+        }) ;
     }
 }

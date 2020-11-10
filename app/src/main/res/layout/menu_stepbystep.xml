@@ -83,6 +83,12 @@
                 android:layout_height="wrap_content"
                 android:text="Difference of Two Means" />
 
+            <Button
+                android:id="@+id/quadraticButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quadratic Formula" />
+
         </LinearLayout>
     </ScrollView>
 
