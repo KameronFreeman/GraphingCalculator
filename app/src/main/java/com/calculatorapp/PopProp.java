@@ -131,12 +131,15 @@ public class PopProp extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Checks for invalid input.
-                if (!inputTextRatio.getText().toString().equals("") ||
-                        !inputTextRatio.getText().toString().equals(".") ||
-                        !inputTextNull.getText().toString().equals("") ||
-                        !inputTextNull.getText().toString().equals(".") ||
-                        !inputTextCount.getText().toString().equals("") ||
-                        !inputTextCount.getText().toString().equals(".")) {
+                if (!inputTextRatio.getText().toString().equals("") &&
+                        !inputTextRatio.getText().toString().equals(".") &&
+                        !inputTextRatio.getText().toString().equals("-.") &&
+                        !inputTextNull.getText().toString().equals("") &&
+                        !inputTextNull.getText().toString().equals(".") &&
+                        !inputTextNull.getText().toString().equals("-.") &&
+                        !inputTextCount.getText().toString().equals("") &&
+                        !inputTextCount.getText().toString().equals(".") &&
+                        !inputTextCount.getText().toString().equals("-.")) {
                     //Gets string values from text boxes.
                     String tempStringRatio = inputTextRatio.getText().toString();
                     String tempStringNull = inputTextNull.getText().toString();
@@ -166,11 +169,7 @@ public class PopProp extends AppCompatActivity {
                             " value, giving us: " + subtraction + "/" + squareRoot + " = " +
                             answer);
                 } else {
-                    //FIX:Crash somehow caused here
-                    outputText.setText("Please enter a valid number.");
-                    inputTextRatio.setText("");
-                    inputTextNull.setText("");
-                    inputTextCount.setText("");
+                    outputText.setText("Please enter a valid number in all text boxes.");
                 }
             }
         });

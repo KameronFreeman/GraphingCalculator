@@ -117,12 +117,15 @@ public class QuadraticActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                if (!inputA.getText().toString().equals("") ||
-                        !inputA.getText().toString().equals(".") ||
-                        !inputB.getText().toString().equals("") ||
-                        !inputB.getText().toString().equals(".") ||
-                        !inputC.getText().toString().equals("") ||
-                        !inputC.getText().toString().equals(".")) {
+                if (!inputA.getText().toString().equals("") &&
+                        !inputA.getText().toString().equals(".") &&
+                        !inputA.getText().toString().equals("-.") &&
+                        !inputB.getText().toString().equals("") &&
+                        !inputB.getText().toString().equals(".") &&
+                        !inputB.getText().toString().equals("-.") &&
+                        !inputC.getText().toString().equals("") &&
+                        !inputC.getText().toString().equals(".") &&
+                        !inputC.getText().toString().equals("-.")) {
                     //Gets string values from input boxes.
                     String tempStringA = inputA.getText().toString();
                     String tempStringB = inputB.getText().toString();
@@ -156,10 +159,7 @@ public class QuadraticActivity extends AppCompatActivity {
                             + subtractionVal + "/" + val2a + " = x = " + answerTwo);
 
                 } else {
-                    inputA.setText("");
-                    inputB.setText("");
-                    inputC.setText("");
-                    output.setText("Please input a valid number.");
+                    output.setText("Please input a valid number in all text boxes.");
                 }
             }
         });

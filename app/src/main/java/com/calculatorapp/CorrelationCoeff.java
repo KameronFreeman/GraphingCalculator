@@ -211,18 +211,24 @@ public class CorrelationCoeff extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Checks for invalid input.
-                if (!inputXValueCC.getText().toString().equals("") ||
-                        !inputXValueCC.getText().toString().equals(".") ||
-                        !inputXMeanCC.getText().toString().equals("") ||
-                        !inputXMeanCC.getText().toString().equals(".") ||
-                        !inputSXCC.getText().toString().equals("") ||
-                        !inputSXCC.getText().toString().equals(".") ||
-                        !inputYValueCC.getText().toString().equals("") ||
-                        !inputYValueCC.getText().toString().equals(".") ||
-                        !inputYMeanCC.getText().toString().equals(".") ||
-                        !inputYMeanCC.getText().toString().equals("") ||
-                        !inputSYCC.getText().toString().equals("") ||
-                        !inputSYCC.getText().toString().equals(".")) {
+                if (!inputXValueCC.getText().toString().equals("") &&
+                        !inputXValueCC.getText().toString().equals(".") &&
+                        !inputXValueCC.getText().toString().equals("-.") &&
+                        !inputXMeanCC.getText().toString().equals("") &&
+                        !inputXMeanCC.getText().toString().equals(".") &&
+                        !inputXMeanCC.getText().toString().equals("-.") &&
+                        !inputSXCC.getText().toString().equals("") &&
+                        !inputSXCC.getText().toString().equals(".") &&
+                        !inputSXCC.getText().toString().equals("-.") &&
+                        !inputYValueCC.getText().toString().equals("") &&
+                        !inputYValueCC.getText().toString().equals(".") &&
+                        !inputYValueCC.getText().toString().equals("-.") &&
+                        !inputYMeanCC.getText().toString().equals(".") &&
+                        !inputYMeanCC.getText().toString().equals("") &&
+                        !inputYMeanCC.getText().toString().equals("-.") &&
+                        !inputSYCC.getText().toString().equals("") &&
+                        !inputSYCC.getText().toString().equals(".") &&
+                        !inputSYCC.getText().toString().equals("-.")) {
                     //Gets all values from the text boxes.
                     String tempStringValueX = inputXValueCC.getText().toString();
                     inputXValueCC.setText("");
@@ -269,14 +275,7 @@ public class CorrelationCoeff extends AppCompatActivity {
                             " minus one, which gives us: " + sum + "*(1/(" + count + "-1)) = " +
                             answer);
                 } else {
-                    //FIX:Crash somehow caused here
-                    outputTextCC.setText("");
-                    inputXValueCC.setText("");
-                    inputXMeanCC.setText("");
-                    inputSXCC.setText("");
-                    inputYValueCC.setText("");
-                    inputYMeanCC.setText("");
-                    inputSYCC.setText("");
+                    outputTextCC.setText("Please enter a valid number in all text boxes.");
                 }
             }
         });

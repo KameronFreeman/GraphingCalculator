@@ -209,18 +209,24 @@ public class Mean2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Checks for invalid input.
-                if (!inputTextX1.getText().toString().equals("") ||
-                        !inputTextX1.getText().toString().equals(".") ||
-                        !inputTextStdDev1.getText().toString().equals("") ||
-                        !inputTextStdDev1.getText().toString().equals(".") ||
-                        !inputTextCount1.getText().toString().equals("") ||
-                        !inputTextCount1.getText().toString().equals(".") ||
-                        !inputTextX2.getText().toString().equals("") ||
-                        !inputTextX2.getText().toString().equals(".") ||
-                        !inputTextStdDev2.getText().toString().equals(".") ||
-                        !inputTextStdDev2.getText().toString().equals("") ||
-                        !inputTextCount2.getText().toString().equals("") ||
-                        !inputTextCount2.getText().toString().equals(".")) {
+                if (!inputTextX1.getText().toString().equals("") &&
+                        !inputTextX1.getText().toString().equals(".") &&
+                        !inputTextX1.getText().toString().equals("-.") &&
+                        !inputTextStdDev1.getText().toString().equals("") &&
+                        !inputTextStdDev1.getText().toString().equals(".") &&
+                        !inputTextStdDev1.getText().toString().equals("-.") &&
+                        !inputTextCount1.getText().toString().equals("") &&
+                        !inputTextCount1.getText().toString().equals(".") &&
+                        !inputTextCount1.getText().toString().equals("-.") &&
+                        !inputTextX2.getText().toString().equals("") &&
+                        !inputTextX2.getText().toString().equals(".") &&
+                        !inputTextX2.getText().toString().equals("-.") &&
+                        !inputTextStdDev2.getText().toString().equals(".") &&
+                        !inputTextStdDev2.getText().toString().equals("") &&
+                        !inputTextStdDev2.getText().toString().equals("-.") &&
+                        !inputTextCount2.getText().toString().equals("") &&
+                        !inputTextCount2.getText().toString().equals(".") &&
+                        !inputTextCount2.getText().toString().equals("-.")) {
                     //Gets string values from input boxes.
                     String tempStringX1 = inputTextX1.getText().toString();
                     String tempStringX2 = inputTextX2.getText().toString();
@@ -255,14 +261,7 @@ public class Mean2 extends AppCompatActivity {
                             " divide our subtraction value from our square root value, giving us:" +
                             " " + subtraction + "/" + squareRoot + " = " + answer);
                 } else {
-                    //FIX:Crash somehow caused here
-                    outputText.setText("");
-                    inputTextX1.setText("");
-                    inputTextX2.setText("");
-                    inputTextStdDev1.setText("");
-                    inputTextStdDev2.setText("");
-                    inputTextCount1.setText("");
-                    inputTextCount2.setText("");
+                    outputText.setText("Please enter a valid number in all text boxes.");
                 }
             }
         });

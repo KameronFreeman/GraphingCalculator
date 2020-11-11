@@ -49,8 +49,8 @@ public class HyperGeoCalc extends AppCompatActivity {
                 DecimalFormat df = new DecimalFormat("0.00");
 
                 //Checks for no input.
-                if (!deckInput.getText().toString().equals("") ||
-                        !copiesInput.getText().toString().equals("") ||
+                if (!deckInput.getText().toString().equals("") &&
+                        !copiesInput.getText().toString().equals("") &&
                         !turnsInput.getText().toString().equals("")) {
                     //Gets the values from the input boxes.
                     String deckString = deckInput.getText().toString();

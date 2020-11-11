@@ -106,10 +106,12 @@ public class SampleStdDev extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Checks for invalid input.
-                if (!inputTextValue.getText().toString().equals("") ||
-                        !inputTextValue.getText().toString().equals(".") ||
-                        !inputTextMean.getText().toString().equals("") ||
-                        !inputTextMean.getText().toString().equals(".")) {
+                if (!inputTextValue.getText().toString().equals("") &&
+                        !inputTextValue.getText().toString().equals(".") &&
+                        !inputTextValue.getText().toString().equals("-.") &&
+                        !inputTextMean.getText().toString().equals("") &&
+                        !inputTextMean.getText().toString().equals(".") &&
+                        !inputTextMean.getText().toString().equals("-.")) {
                     //Gets string values from input boxes.
                     String tempStringValue = inputTextValue.getText().toString();
                     inputTextValue.setText("");
@@ -144,10 +146,7 @@ public class SampleStdDev extends AppCompatActivity {
                             sum + "/(" + count + "-1) = " + preSquareRoot + "\nThen we take the " +
                             "square root to get our answer: √" + preSquareRoot + " = " + answer);
                 } else {
-                    //FIX:Crash somehow caused here
-                    outputTextSD.setText("Please enter a valid number.");
-                    inputTextValue.setText("");
-                    inputTextMean.setText("");
+                    outputTextSD.setText("Please enter a valid number in all text boxes.");
                 }
             }
         });

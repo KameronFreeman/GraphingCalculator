@@ -156,14 +156,18 @@ public class PopMean extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Checks for invalid input.
-                if (!inputTextExpected.getText().toString().equals("") ||
-                        !inputTextExpected.getText().toString().equals(".") ||
-                        !inputTextMean.getText().toString().equals("") ||
-                        !inputTextMean.getText().toString().equals(".") ||
-                        !inputStdDev.getText().toString().equals("") ||
-                        !inputStdDev.getText().toString().equals(".") ||
-                        !inputCount.getText().toString().equals("") ||
-                        !inputCount.getText().toString().equals(".")) {
+                if (!inputTextExpected.getText().toString().equals("") &&
+                        !inputTextExpected.getText().toString().equals(".") &&
+                        !inputTextExpected.getText().toString().equals("-.") &&
+                        !inputTextMean.getText().toString().equals("") &&
+                        !inputTextMean.getText().toString().equals(".") &&
+                        !inputTextMean.getText().toString().equals("-.") &&
+                        !inputStdDev.getText().toString().equals("") &&
+                        !inputStdDev.getText().toString().equals(".") &&
+                        !inputStdDev.getText().toString().equals("-.") &&
+                        !inputCount.getText().toString().equals("") &&
+                        !inputCount.getText().toString().equals(".") &&
+                        !inputCount.getText().toString().equals("-.")) {
                     //Gets string values from input boxes.
                     String tempStringExpected = inputTextExpected.getText().toString();
                     String tempStringMean = inputTextMean.getText().toString();
@@ -189,12 +193,7 @@ public class PopMean extends AppCompatActivity {
                             "\nFinally, we divide these two values together, giving us: " +
                             subtraction + "/" + division + " = " + answer);
                 } else {
-                    //FIX:Crash somehow caused here
-                    outputText.setText("Please enter a valid number.");
-                    inputTextExpected.setText("");
-                    inputTextMean.setText("");
-                    inputStdDev.setText("");
-                    inputCount.setText("");
+                    outputText.setText("Please enter a valid number in all text boxes.");
                 }
             }
         });

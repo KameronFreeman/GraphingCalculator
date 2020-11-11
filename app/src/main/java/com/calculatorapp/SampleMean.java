@@ -85,8 +85,9 @@ public class SampleMean extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Checks for invalid input.
-                if (!inputTextSM.getText().toString().equals("") ||
-                        !inputTextSM.getText().toString().equals(".")) {
+                if (!inputTextSM.getText().toString().equals("") &&
+                        !inputTextSM.getText().toString().equals(".") &&
+                        !inputTextSM.getText().toString().equals("-.")) {
                     //Gets the text from the input box.
                     String tempString = inputTextSM.getText().toString();
                     inputTextSM.setText("");
@@ -112,9 +113,7 @@ public class SampleMean extends AppCompatActivity {
                             "\nThen, we must divide it by the total number of values, which gives" +
                             " us: " + sum + "/" + count + "\n Which gives us our answer: " + mean);
                 } else {
-                    //FIX:Crash somehow caused here
                     outputTextSM.setText("Please enter a valid number.");
-                    inputTextSM.setText("");
                 }
             }
         });
