@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.Toast;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -15,7 +18,10 @@ import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.GridLabelRenderer;
 import com.jjoe64.graphview.LegendRenderer;
 import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.DataPointInterface;
 import com.jjoe64.graphview.series.LineGraphSeries;
+import com.jjoe64.graphview.series.OnDataPointTapListener;
+import com.jjoe64.graphview.series.Series;
 
 public class graphingActivity extends AppCompatActivity {
     private ArrayList<Double> m = GraphingCalcInputsActivity.m;
@@ -58,6 +64,15 @@ public class graphingActivity extends AppCompatActivity {
             }
             dataset.get(i).setColor(color[c]);
             c++;
+            dataset.get(i).setOnDataPointTapListener(new OnDataPointTapListener() {
+                @Override
+                public void onTap(Series series, DataPointInterface dataPoint) {
+                    String msg = "X: "+ dataPoint.getX() + "\nY: " + dataPoint.getY();
+                    Toast.makeText(graphingActivity.this,msg,Toast.LENGTH_LONG).show();
+                }
+            });
+
+
         }
 
 
@@ -87,7 +102,6 @@ public class graphingActivity extends AppCompatActivity {
         gridLabel.setVerticalAxisTitle("Y Axis Title");
         gridLabel.setVerticalAxisTitleTextSize(50);
 
-
     }
 
     // restart equations if back button clicked
@@ -99,5 +113,7 @@ public class graphingActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+
 
 }
