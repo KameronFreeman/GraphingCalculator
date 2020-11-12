@@ -53,7 +53,7 @@ public class calculusActivity extends AppCompatActivity {
         dervBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                solutionView.setText(calcOperation.derv(inputText.getText().toString()));
+                solutionView.setText(calcOperation.takeDerivative(inputText.getText().toString()));
             }
         });
 
