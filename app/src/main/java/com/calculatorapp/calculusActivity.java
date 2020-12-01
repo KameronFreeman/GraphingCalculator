@@ -31,6 +31,7 @@ public class calculusActivity extends AppCompatActivity {
         final EditText inputText = (EditText) findViewById(R.id.InputEditText);
 
         calcOperation calculus = new calcOperation();
+        Simplify simp = new Simplify();
 
         //If back button is pressed
         backBtn.setOnClickListener(new View.OnClickListener() {
@@ -53,7 +54,7 @@ public class calculusActivity extends AppCompatActivity {
         dervBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                solutionView.setText(calcOperation.takeDerivative(inputText.getText().toString()));
+                solutionView.setText(Simplify.simp(calcOperation.takeDerivative(inputText.getText().toString()) ));
             }
         });
 

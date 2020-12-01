@@ -3,8 +3,11 @@ package com.calculatorapp;
 public class calcOperation {
 
 
+    private static Simplify simple;
+
     public calcOperation(){
     }
+
 static String output;
 //    public static String derv(String input){
 //        int coefficent;
