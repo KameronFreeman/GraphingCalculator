@@ -6,7 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 
 
@@ -19,19 +21,21 @@ public class calculusActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculus);
 
+        final boolean[] simp = {false};
+
         //Initialize Buttons
         Button backBtn = (Button) findViewById(R.id.backBtn);
-        Button graphBtn = (Button) findViewById(R.id.graphBtn);
+        Button simplifyBtn = (Button) findViewById(R.id.simplifyBtn);
 
         Button dervBtn = (Button) findViewById(R.id.dervBtn);
-        Button dervNBtn = (Button) findViewById(R.id.dervNBtn);
+        //Button dervNBtn = (Button) findViewById(R.id.dervNBtn);
+
 
         //Initialize TextView and EditText
         final TextView solutionView = (TextView) findViewById(R.id.solutionTextView);
         final EditText inputText = (EditText) findViewById(R.id.InputEditText);
 
-        calcOperation calculus = new calcOperation();
-        Simplify simp = new Simplify();
+        final Switch simpleSwitch = (Switch) findViewById(R.id.simplifySwitch);
 
         //If back button is pressed
         backBtn.setOnClickListener(new View.OnClickListener() {
@@ -42,11 +46,24 @@ public class calculusActivity extends AppCompatActivity {
             }
         });
 
-        //If graph button is pressed
-        graphBtn.setOnClickListener(new View.OnClickListener() {
+        //If simplify button is pressed
+        simplifyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                try {
+                    //solutionView.setText("Hello");
+                    if (!ValidInput.isValidInput(inputText.getText().toString())) {
+                        solutionView.setText(ValidInput.getErrorMessage());
 
+                    } else {
+                        String input = inputText.getText().toString();
+                        //simplify simp = new simplify(input);
+                        solutionView.setText(simplify.simple(input));
+                    }
+                }catch(Exception e){
+                    solutionView.setText("Enter an expression and then press simplify");
+
+                }
             }
         });
 
@@ -54,17 +71,40 @@ public class calculusActivity extends AppCompatActivity {
         dervBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                solutionView.setText(Simplify.simp(calcOperation.takeDerivative(inputText.getText().toString()) ));
+
+                try {
+                    //solutionView.setText("Hello");
+                    if (!ValidInput.isValidInput(inputText.getText().toString())) {
+                        solutionView.setText(ValidInput.getErrorMessage());
+
+                    } else {
+                        String input = inputText.getText().toString();
+                        if(simp[0]){
+                            solutionView.setText(simplify.simple(derivative.takeDerivative(input)));
+                        }else {
+                            solutionView.setText(derivative.takeDerivative(input));
+                        }
+                    }
+                }catch(Exception e){
+                    solutionView.setText("Enter an expression and then press derivative");
+
+                }
+
             }
+
         });
 
-        //If derivative N button is pressed
-        dervNBtn.setOnClickListener(new View.OnClickListener() {
+        simpleSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View v) {
-
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked == true){
+                    simp[0] = true;
+                }else{
+                    simp[0] = false;
+                }
             }
         });
+
 
 
     }

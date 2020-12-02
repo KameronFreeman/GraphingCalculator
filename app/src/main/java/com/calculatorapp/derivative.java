@@ -1,84 +1,22 @@
 package com.calculatorapp;
 
-public class calcOperation {
+/**
+ * Derivative class is meant to take a math expression as a string and return the derivative of that expression
+ *
+ * @author JACOB LOCKWOOD
+ * @version 12/02/2020
+ */
+public class derivative
+{
 
+    static String output;
+    static simplify Simple = new simplify();
+    public derivative(){
 
-    private static Simplify simple;
-
-    public calcOperation(){
     }
 
-static String output;
-//    public static String derv(String input){
-//        int coefficent;
-//        int power;
-//        String output = "";
-//
-//        if(input.charAt(0) == '-'){
-//            int i=1;
-//            while(constant(input.charAt(i))){
-//                i+=1;
-//            }
-//            if(constant(input.charAt(1))){
-//                String c = input.substring(1,i);
-//                coefficent = Integer.parseInt(c);
-//                power = Integer.parseInt(input.substring(i+2));
-//                int z = coefficent*power;
-//                if((power-1)==0){
-//                    output = input.charAt(0) + String.valueOf(z);
-//                }else{
-//                    output = input.charAt(0) + String.valueOf(z) + input.charAt(i) +input.charAt(i+1)+ String.valueOf(power-1);
-//                }
-//            }else{
-//                coefficent = 1;
-//                power = Integer.parseInt(input.substring(i+2));
-//                int z = coefficent*power;
-//                if((power-1)==0){
-//                    output = input.charAt(0) + String.valueOf(z);
-//                }else{
-//                    output = input.charAt(0) + String.valueOf(z) + input.charAt(i) + input.charAt(i+1)+String.valueOf(power-1);
-//                }
-//            }
-//        }else{
-//            int i=0;
-//            while(constant(input.charAt(i))){
-//                i+=1;
-//            }
-//            if(constant(input.charAt(0))){
-//                String c = input.substring(0,i);
-//                coefficent = Integer.parseInt(c);
-//                power = Integer.parseInt(input.substring(i+2));
-//                int z = coefficent*power;
-//                if((power-1)==0){
-//                    output = String.valueOf(z);
-//                }else{
-//                    output = String.valueOf(z) + input.charAt(i) +input.charAt(i+1)+ String.valueOf(power-1);
-//                }
-//            }else{
-//                coefficent = 1;
-//                power = Integer.parseInt(input.substring(i+2));
-//                int z = coefficent*power;
-//                if((power-1) == 0){
-//                    output = String.valueOf(z);
-//                }else{
-//                    output = String.valueOf(z) + input.charAt(i) + input.charAt(i+1)+String.valueOf(power-1);
-//                }
-//            }
-//        }
-//        return output;
-//    }
-//
-//
-//    // constant checks if char c is a numeric value between 0-9
-//    public static boolean constant(char c){
-//        if(Character.getNumericValue(c) <= 9 ){
-//            return true;
-//        }
-//        return false;
-//    }
-
-
     public static String takeDerivative(String input){
+        System.out.println("Input " + input);
         for(int i= 0;i<input.length();i++){
             int count = 0;
             if(input.charAt(i)=='('){
@@ -103,18 +41,37 @@ static String output;
         return output;
     }
 
-    // Expected input
+    // Expected input is passsed as g(f(x))
+    // Output is g'(f(x))*f'(x)
     public static String chainRule(String input){
+        String temp = "x^";
         int i;
-        for(i=0;input.charAt(i)!='^';i++){}
-        String f_OF_x = input.substring(0,i);
-        String g_OF_x = input.substring(i+1);
-
-        return output;
+        int count =0;
+        String f_OF_x;
+        String g_OF_x;
+        for(i=0;i<input.length();i++){
+            if(input.charAt(i)=='('){
+                count+=1;
+            }else if(input.charAt(i)==')'){
+                count-=1;
+            }else if(count==0){
+                try{
+                    if(input.charAt(i)=='^'){
+                        f_OF_x = input.substring(1,i-1);
+                        g_OF_x = input.substring(i+1);
+                        int z = Integer.parseInt(g_OF_x);
+                        return output = g_OF_x + "(" + f_OF_x + ")^" + String.valueOf(z-1) + "*" + takeDerivative(f_OF_x);
+                    }
+                }catch(Exception e){
+                    break;
+                }
+            }
+        }
+        return output = "Invalid input";
     }
 
-    // Expexted input is passed as f(x)/g(x)
-    // Outpit is (f'(x)*g(x)-f(x)*g'(x))/(g(x))^2
+    // Expected input is passed as f(x)/g(x)
+    // Output is (f'(x)*g(x)-f(x)*g'(x))/(g(x))^2
     public static String quotientRule(String input){
         int i;
         for(i=0;input.charAt(i)!='/';i++){}
@@ -283,6 +240,8 @@ static String output;
                     }else{
                         output="Invalid input";
                     }
+                }else{
+                    //output = "0";
                 }
             }catch(Exception e){
                 String coefficent = input.substring(0,i);
@@ -292,21 +251,26 @@ static String output;
         }else{
             output ="Invalid input";
         }
+        if(Simple.isConstant(output) && input.equals(output)){
+            return "0";
+        }
         return output ;
     }
 
     // constant checks if char c is a numeric value between 0-9
-    private static boolean constant(char c){
-        if(Character.getNumericValue(c) <= 9 ){
+    public static boolean constant(char c){
+        String temp = c+"";
+        if( temp.matches("/|0|1|2|3|4|5|6|7|8|9|/") ){
             return true;
         }
         return false;
     }
 
-    private boolean isOperator(char c){
+    public static boolean isOperator(char c){
         if( c=='-' || c=='+' || c=='/' || c=='*' || c=='(' || c=='^'){
             return true;
         }
         return false;
     }
+
 }
