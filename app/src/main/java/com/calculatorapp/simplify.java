@@ -98,9 +98,35 @@ public class simplify{
         return output;
     }
 
+    // exponent takes any expression and determines wether an exponent needs to be evaluated
+    // If there is an exponent symbol in the expression it will simplify the terms and format the output according to where the subtraction symbol is located in the expression
     public static String exponent(String input){
         String output = input;
+        for(int i = 0;i<input.length();i++){
+            if( input.charAt(i) == '^'){
+                if( isConstant( previousTerm(input.substring(0,i) ) ) && isConstant(nextTerm(input.substring(i+1) )) ){
+                    String prevTerm = previousTerm(input.substring(0,i));
+                    String nextTerm = nextTerm(input.substring(i+1));
+                    int expresionLength = prevTerm.length() + nextTerm.length() + 1;
+                    if( singleTerm(input) ){
+                        output = exponent(prevTerm,nextTerm);
+                    }else if( input.substring(0,expresionLength).equals(prevTerm+'^'+nextTerm) ){
+                        output = exponent(prevTerm,nextTerm) + input.substring(expresionLength) ;
+                    }else if( input.substring(input.length() - nextTerm.length()).equals(nextTerm) ){
+                        output = input.substring(0,input.length()-expresionLength) + exponent(prevTerm,nextTerm) ;
+                    }else{
+                        output = input.substring (0, i -prevTerm.length()) + exponent(prevTerm,nextTerm) + input.substring(i+nextTerm.length()+1)  ;
+                    }
+                }
+            }
+        }
         return output;
+    }
+
+    // returns the string value of string x raised to string y power
+    // x^y
+    public static String exponent(String x, String y){
+        return String.valueOf( (int)Math.pow(Integer.parseInt(x),Integer.parseInt(y) ) );
     }
 
     // combineTerms determines how to combine the left term with the right term by the operator
