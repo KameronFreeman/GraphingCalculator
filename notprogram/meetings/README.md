@@ -4,23 +4,23 @@ Hold a team meeting at least once a week in some format.  Copy the following tem
 
 ## Meeting minutes template
 
-Team name:
+Team name: Calculator App
 
-Members present:
+Members present: Alex Klein, Donovan Heynen, & Jacob Lockwood
 
-Date:
+Date: 12/4/2020
 
-Time:
+Time: 1:10 - 1:50
 
 Discussion points: 
 
-*
-*
-*
+* Updating xml themes, based on main screen update
+* Icon development
+* Updating Name
 
 Goals for next week (include responsibilities)
 
-*
-*
-*
+* Finish rest of xml screens to have same theme (Donovan)
+* Create Icon 
+* Finalize new name
 
