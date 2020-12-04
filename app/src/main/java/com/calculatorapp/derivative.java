@@ -10,11 +10,13 @@ public class derivative
 {
 
     static String output;
-    static simplify Simple = new simplify();
-    public derivative(){
+    private static simplify Simple;
+    //simplify Simple = new simplify();
+    public  derivative(){
 
     }
 
+    // Main method in derivative class. Used to take the derivative of any expression, besides for trig. functions.
     public static String takeDerivative(String input){
         System.out.println("Input " + input);
         for(int i= 0;i<input.length();i++){
@@ -23,7 +25,7 @@ public class derivative
                 count+=1;
             }else if(input.charAt(i)==')'){
                 count+=1;
-            }else if(count==0){
+            }else if(count==0 && i!=0 ){
                 if(input.charAt(i)=='+'){
                     return output = takeDerivative(input.substring(0,i)) + "+" + takeDerivative(input.substring(i+1));
                 }else if(input.charAt(i)=='-'){
@@ -254,6 +256,9 @@ public class derivative
         if(Simple.isConstant(output) && input.equals(output)){
             return "0";
         }
+        if(output.charAt(0) == '0' || input.charAt(0) == '-' && input.charAt(1) == '0'){
+            return "0";
+        }
         return output ;
     }
 
@@ -266,6 +271,7 @@ public class derivative
         return false;
     }
 
+    // Checks if char c is a math operator
     public static boolean isOperator(char c){
         if( c=='-' || c=='+' || c=='/' || c=='*' || c=='(' || c=='^'){
             return true;
