@@ -4,32 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#1E1E1E"
     tools:context="com.calculatorapp.SampleMean">
 
     <TextView
         android:id="@+id/textSampMean"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sample Mean"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/inputTextSM"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.761"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1" />
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="33dp"
+        android:fontFamily="@font/advent_pro_bold"
+        android:text="SAMPLE MEAN"
+        android:textAlignment="center"
+        android:textColor="#D68000"
+        android:textSize="40sp"
+        app:layout_constraintStart_toEndOf="@+id/backButtonSM"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/backButtonSM"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="33dp"
+        android:backgroundTint="#323131"
+        android:fontFamily="@font/advent_pro_bold"
         android:text="Back"
-        app:layout_constraintBottom_toTopOf="@+id/negativeButtonSM"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.06" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/inputTextSM"
@@ -38,6 +43,7 @@
         android:ems="10"
         android:hint="Enter Values"
         android:inputType="numberDecimal"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/addButtonSM"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.756"
