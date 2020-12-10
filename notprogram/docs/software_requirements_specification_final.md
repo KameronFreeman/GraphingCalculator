@@ -86,13 +86,11 @@ This portion of the document aims to show the number of tests that have been don
 ## Unit tests
 | ID | Description | Steps | Input Values | Expected Output | Actual Output | Pass/Fail | Requirement Link |
 | :-------------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| TC1 | User shall input a function into a text-box. | enter a value in text box and press any derivative button | x^2 | 2x | 2x | pass | <requirement IDs this test case is
-linked to> |
+| TC1 | User shall input a function into a text-box. | enter a value in text box and press any derivative button | x^2 | 2x | 2x | pass | <requirement linked to> |
     
 | ID | Description | Steps | Input Values | Expected Output | Actual Output | Pass/Fail | Requirement Link |
 | :-------------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| TC1 | User shall input a function into a text-box. | enter a value in text box and press any simplify button | 2+2 | 4 | 4 | pass | <requirement IDs this test case is
-linked to> |
+| TC1 | User shall input a function into a text-box. | enter a value in text box and press any simplify button | 2+2 | 4 | 4 | pass | <requirement IDs linked to> |
     
 | ID | Description | Steps | Input Values | Expected Output | Actual Output | Pass/Fail | Requirement Link |
 | :-------------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
