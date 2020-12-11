@@ -14,13 +14,13 @@ In each section of this portion, each header represents one feature of the app. 
 ### Step-by-Step
 | ID | Requirement | Test Cases |
 | :-------------: | :----------: | :----------: |
-| FR2 | Step-by-step shall allow users to input any number they want into input boxes. | TC1 |
+| FR2 | Step-by-step shall allow users to input any number they want into input boxes. | TC6 |
 | FR3 | Step-by-step shall output answers in a cohesive way so the user can understand how to do the calculation themselves. | TBD |
 | FR4 | User shall be able to go back to other functions of the app from the step-by-step portion. | TC1,TC2 |
 ### Basic Calculator
 | ID | Requirement | Test Cases |
 | :-------------: | :----------: | :----------: |
-| FR5 | Basic calculator shall handle basic addition, subtraction, multiplication, and division manipulation of variable input by the user | TC1 |
+| FR5 | Basic calculator shall handle basic addition, subtraction, multiplication, and division manipulation of variable input by the user | TC7, TC8, TC9, TC10|
 | FR6 | User shall be able to use the previous output as starting number for next calculation. | TBD |
 ### Menu
 | ID | Requirement | Test Cases |
@@ -48,17 +48,17 @@ In each section of this portion, each header represents one feature of the app. 
 ### Calculator App
 | ID | Requirement | Test Cases |
 | :-------------: | :----------: | :----------: |
-| NFR1 | App shall have fast and seamless transitions from one part of the app to another. | TC4 |
-| NFR2 | App shall be allowed to run on many different android devices. | TBD |
+| NFR1 | App shall have fast and seamless transitions from one part of the app to another. | TC16 |
+| NFR2 | App shall be allowed to run on many different android devices. | TC17 |
 ### Step-by-Step
 | ID | Requirement | Test Cases |
 | :-------------: | :----------: | :----------: |
-| NFR3 | User shall not be able to enter non-numbers into the input boxes for step-by-step. | TC4 |
+| NFR3 | User shall not be able to enter non-numbers into the input boxes for step-by-step. | TC18 |
 ### Basic Calculator
 | ID | Requirement | Test Cases |
 | :-------------: | :----------: | :----------: |
 | NFR4 | Program shall be able to detect if an input is valid or invalid. | TC4 |
-| NFR5 | Basic calculator shall have a shared display screen for user inputs and outputs. | TBD |
+| NFR5 | Basic calculator shall have a shared display screen for user inputs and outputs. | TC19 |
 ### Menu
 | ID | Requirement | Test Cases |
 | :-------------: | :----------: | :----------: |
@@ -66,20 +66,18 @@ In each section of this portion, each header represents one feature of the app. 
 ### Calculus
 | ID | Requirement | Test Cases |
 | :-------------: | :----------: | :----------: |
-| NFR7 | If show graph option is selected, the app shall display a graph of the entered function and the selected option. | TC4 |
-| NFR8 | An output display shall update with a solution when a valid function is entered along with a calculus option being selected. | TBD |
-| NFR9 | The app once in the calculus portion shall be able to go back to the main menu. | TC6 |
+| NFR7 | An output display shall update with a solution when a valid function is entered along with a calculus option being selected. | TBD |
+| NFR8 | The app once in the calculus portion shall be able to go back to the main menu. | TC6 |
 ### Graphing Calculator
 | ID | Requirement | Test Cases |
 | :-------------: | :----------: | :----------: |
-| NFR10 | The graphing calculator shall graph separate lines in different colors. | TC4 |
-| NFR11 | The graphing calculator shall be able to do graph complex equations. | TBD |
-| NFR12 | The graphing calculator shall look clean. | TC6 |
+| NFR9 | The graphing calculator shall graph separate lines in different colors. | TC4 |
+| NFR10 | The graphing calculator shall look clean. | TC20 |
 ### Hypergeometric Calculator
 | ID | Requirement | Test Cases |
 | :-------------: | :----------: | :----------: |
-| NFR13 | The hypergeometric calculator shall be accruate and polished. | TC4 |
-| NFR14 | The hypergeometric calculator shall be easy to use. | TBD |
+| NFR11 | The hypergeometric calculator shall be accruate and polished. | TC4 |
+| NFR12 | The hypergeometric calculator shall be easy to use. | TBD |
 
 # Test Specification
 This portion of the document aims to show the number of tests that have been done throughout the project that test the truthfulness and accuracy of our above requirements.
@@ -106,23 +104,23 @@ This portion of the document aims to show the number of tests that have been don
     
 | ID | Description | Steps | Input Values | Expected Output | Actual Output | Pass/Fail | Requirement Link |
 | :-------------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| TC6 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> |
+| TC6 | Any number can be put into input boxes. | In the menu, navigate to the sample mean of the step-by-step formulas. Enter any number(s) into the text box and press "Add". | 2, 5, 2.2235, -2.964 | 1.564875 | 1.5648749999999999 | Pass | FR2 |
     
 | ID | Description | Steps | Input Values | Expected Output | Actual Output | Pass/Fail | Requirement Link |
 | :-------------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| TC7 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> |
+| TC7 | Calculator can handle addition. | Navigate to calculator and add 2 values together. | 8 + 7 | 15 | 15.0 | Pass | FR5 |
     
 | ID | Description | Steps | Input Values | Expected Output | Actual Output | Pass/Fail | Requirement Link |
 | :-------------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| TC8 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> |
+| TC8 | Calculator can handle subtraction. | Navigate to calculator and subtract 2 values from each other. | 45 - 37 | 8 | 8.0 | Pass | FR5 |
     
 | ID | Description | Steps | Input Values | Expected Output | Actual Output | Pass/Fail | Requirement Link |
 | :-------------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| TC9 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> |
+| TC9 | Calculator can handle multiplication. | Navigate to calculator and multiply 2 values together. | 16 x 25 | 400 | 400.0 | Pass | FR5 |
     
 | ID | Description | Steps | Input Values | Expected Output | Actual Output | Pass/Fail | Requirement Link |
 | :-------------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| TC10 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> |
+| TC10 | Calculator can handle division. | Navigate to calculator and divide 2 values from each other. | 4 / 20 | 0.2 | 0.2 | Pass | FR5 |
     
     
 ## Integration tests
@@ -150,28 +148,28 @@ This portion of the document aims to show the number of tests that have been don
 ## System tests
 | ID | Description | Steps | Input Values | Expected Output | Actual Output | Pass/Fail | Requirement Link |
 | :-------------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| TC16 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> |
+| TC16 | App has fast and seamless transitions. | Enter any portion of the app and be able to get out without issue. | Press a navigation button in the menu and find a way back. | Seamless navigation. | Seamless navigation. | Pass | NFR1 |
     
 | ID | Description | Steps | Input Values | Expected Output | Actual Output | Pass/Fail | Requirement Link |
 | :-------------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| TC17 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> |
+| TC17 | App should be able to run on many different android devices. | Attempt to run the app on different devices. | Ran on physical S8+. Run on emulators of other models. | App runs smoothly on all. | App runs smoothly on all. | Pass | NFR2 |
     
 | ID | Description | Steps | Input Values | Expected Output | Actual Output | Pass/Fail | Requirement Link |
 | :-------------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| TC18 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> |
+| TC18 | User can't enter non numbers in SBS. | Go into any SBS feature and enter an invalid number. | ., -. | App outputs message. | App outputs message. | Pass | NFR3 |
     
 | ID | Description | Steps | Input Values | Expected Output | Actual Output | Pass/Fail | Requirement Link |
 | :-------------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| TC19 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> |
+| TC19 | Input and output of calculator should be the same window. | Open calculator, enter an equation, hit equal sign. | 6+7= | 13 appears in same window. | 13.0 appears in same window. | Pass | NFR5 |
     
 | ID | Description | Steps | Input Values | Expected Output | Actual Output | Pass/Fail | Requirement Link |
 | :-------------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| TC20 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> |
+| TC20 | The graphing calculator should easily graph basic funtions. | Enter graphing calculator, input 1x+2, press "+", press "Graph". | 1x+2 | A graph of y = x + 2. | A graph of y = x + 2. | Pass | NFR12 |
     
     
 # Software Artifacts
 This portion provides links to our artifacts that we have created throughout the semester.
-* [Calculus Use Case]()
-* [Graphing Calculator Use Case]()
-* [Use Case Description for Graphing Calculator]()
-* [Step By Step Use Case]()
+* [Calculus Use Case](https://github.com/Alexander-Klein-GVSU/GVSU-CIS350-CalculatorApp/blob/master/notprogram/artifacts/use_case_diagrams/CalculusUseCase.pdf)
+* [Graphing Calculator Use Case](https://github.com/Alexander-Klein-GVSU/GVSU-CIS350-CalculatorApp/blob/master/notprogram/artifacts/use_case_diagrams/GraphingCalculatorUseCase.pdf)
+* [Use Case Description for Graphing Calculator](https://github.com/Alexander-Klein-GVSU/GVSU-CIS350-CalculatorApp/blob/master/notprogram/artifacts/use_case_diagrams/UseCaseDescriptionGraphingCalc.md)
+* [Step By Step Use Case](https://github.com/Alexander-Klein-GVSU/GVSU-CIS350-CalculatorApp/blob/master/notprogram/artifacts/use_case_diagrams/stepbystepusecase.JPG)
