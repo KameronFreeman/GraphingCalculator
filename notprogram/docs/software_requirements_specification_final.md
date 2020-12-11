@@ -88,7 +88,7 @@ This portion of the document aims to show the number of tests that have been don
     
 | ID | Description | Steps | Input Values | Expected Output | Actual Output | Pass/Fail | Requirement Link |
 | :-------------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| TC2 | User shall input a function into a text-box. | Navigate to calculus calculator. enter a value in text box and press any simplify button | 2+2 | 4 | 4 | pass | <requirement IDs linked to> |
+| TC2 | Take an input from text box and ouput the correct output based on the option that is selected | Navigate to calculus calculator. enter a value in text box and press any simplify button | 2+2 | 4 | 4 | pass | NFR7 |
     
 | ID | Description | Steps | Input Values | Expected Output | Actual Output | Pass/Fail | Requirement Link |
 | :-------------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
