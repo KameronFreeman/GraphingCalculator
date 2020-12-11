@@ -21,7 +21,7 @@ In each section of this portion, each header represents one feature of the app. 
 | ID | Requirement | Test Cases |
 | :-------------: | :----------: | :----------: |
 | FR5 | Basic calculator shall handle basic addition, subtraction, multiplication, and division manipulation of variable input by the user | TC7, TC8, TC9, TC10|
-| FR6 | User shall be able to use the previous output as starting number for next calculation. | TBD |
+| FR6 | User shall be able to use the previous output as starting number for next calculation. | TC3 |
 ### Menu
 | ID | Requirement | Test Cases |
 | :-------------: | :----------: | :----------: |
@@ -84,23 +84,23 @@ This portion of the document aims to show the number of tests that have been don
 ## Unit tests
 | ID | Description | Steps | Input Values | Expected Output | Actual Output | Pass/Fail | Requirement Link |
 | :-------------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| TC1 | User shall input a function into a text-box. | enter a value in text box and press any derivative button | x^2 | 2x | 2x | pass | <requirement linked to> |
+| TC1 | User shall input a function into a text-box. | Navigate to calculus calculator. enter a value in text box and press any derivative button | x^2 | 2x | 2x | pass | FR11 |
     
 | ID | Description | Steps | Input Values | Expected Output | Actual Output | Pass/Fail | Requirement Link |
 | :-------------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| TC2 | User shall input a function into a text-box. | enter a value in text box and press any simplify button | 2+2 | 4 | 4 | pass | <requirement IDs linked to> |
+| TC2 | User shall input a function into a text-box. | Navigate to calculus calculator. enter a value in text box and press any simplify button | 2+2 | 4 | 4 | pass | <requirement IDs linked to> |
     
 | ID | Description | Steps | Input Values | Expected Output | Actual Output | Pass/Fail | Requirement Link |
 | :-------------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| TC3 |  | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> |
+| TC3 | Basic calculator can take input from previous calculation and use it as input for next calculation. | Navigate to basic calculator and enter 2+2 and enter. | 2+2 = 4, 4+2| 6 | 6.0| pass | FR6 |
     
 | ID | Description | Steps | Input Values | Expected Output | Actual Output | Pass/Fail | Requirement Link |
 | :-------------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| TC4 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> |
+| TC4 | calculate toe odds of drawing a card | Must be in hypergeometric portion, then enter # cards, # of copies, and # of draws. | 52, 4, 1 | 7.69 | 7.69 | pass | FR15 |
     
 | ID | Description | Steps | Input Values | Expected Output | Actual Output | Pass/Fail | Requirement Link |
 | :-------------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| TC5 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> |
+| TC5 | Take derivative of equation | must be on calculus portion. input an equation into text box then select derivative button | 4x^3+2x^2 | 12x^2+4x | 12x^2+4x | pass | FR12|
     
 | ID | Description | Steps | Input Values | Expected Output | Actual Output | Pass/Fail | Requirement Link |
 | :-------------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
@@ -126,23 +126,23 @@ This portion of the document aims to show the number of tests that have been don
 ## Integration tests
 | ID | Description | Steps | Input Values | Expected Output | Actual Output | Pass/Fail | Requirement Link |
 | :-------------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| TC11 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> |
+| TC11 | Enter calculus screen | click on calculus calculator in main menu | Press calculus calculator  | calculus layout | calculus layout | pass | FR13 |
     
 | ID | Description | Steps | Input Values | Expected Output | Actual Output | Pass/Fail | Requirement Link |
 | :-------------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| TC12 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> |
+| TC12 | return to main menu from calculus portion | Must be in calculus portion, then click back button | click back button | main menu layout | main menu layout | pass | NFR8 |
     
 | ID | Description | Steps | Input Values | Expected Output | Actual Output | Pass/Fail | Requirement Link |
 | :-------------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| TC13 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> |
+| TC13 | can enter any portion of code from main menu | click on any button in main menu | click on step-by-step button | step=bystep menu | step by step menu | pass | FR7 |
     
 | ID | Description | Steps | Input Values | Expected Output | Actual Output | Pass/Fail | Requirement Link |
 | :-------------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| TC14 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> |
+| TC14 | graph an equation | Enter graphing calculator. Enter a linear function in text box and and click graph  | 2x+1 | graph representation of 2x+1 | graph representation of 2x+1 | pass | FR8 |
     
 | ID | Description | Steps | Input Values | Expected Output | Actual Output | Pass/Fail | Requirement Link |
 | :-------------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| TC15 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> |
+| TC15 | Enter quadratic menu from main menu | In main menu select step by step. Then click quadratic formula | click step by step then quadratic formula | quadratic layout | quadratic layout | pass | NFR1 |
     
     
 ## System tests
