@@ -4,16 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#1E1E1E"
     tools:context="com.calculatorapp.CorrelationCoeff">
 
     <Button
         android:id="@+id/backButtonCC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="33dp"
+        android:backgroundTint="#323131"
+        android:fontFamily="@font/advent_pro_bold"
         android:text="Back"
-        app:layout_constraintBottom_toTopOf="@+id/negativeButtonCC1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,214 +42,214 @@
                 android:id="@+id/outputTextCC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/advent_pro_bold"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
                 android:visibility="visible" />
         </LinearLayout>
     </ScrollView>
 
     <Button
         android:id="@+id/addButtonCC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="28dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#323131"
+        android:fontFamily="@font/advent_pro_bold"
         android:text="Add"
-        app:layout_constraintBottom_toTopOf="@+id/scrollCC"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.824"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/clearButtonCC"
+        app:layout_constraintTop_toBottomOf="@+id/inputSYCC" />
 
     <Button
         android:id="@+id/clearButtonCC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="28dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#323131"
+        android:fontFamily="@font/advent_pro_bold"
         android:text="Clear"
-        app:layout_constraintBottom_toTopOf="@+id/scrollCC"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.182"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/inputSYCC" />
 
     <EditText
         android:id="@+id/inputXValueCC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
+        android:fontFamily="@font/advent_pro_bold"
         android:hint="Enter X Value"
         android:inputType="numberDecimal"
-        app:layout_constraintBottom_toTopOf="@+id/inputXMeanCC"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.791"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.793" />
+        app:layout_constraintStart_toEndOf="@+id/negativeButtonCC1"
+        app:layout_constraintTop_toBottomOf="@+id/textCorrCoeff" />
 
     <Button
         android:id="@+id/negativeButtonCC2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#323131"
+        android:fontFamily="@font/advent_pro_bold"
         android:text="+/-"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/negativeButtonCC3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.959" />
+        app:layout_constraintTop_toBottomOf="@+id/negativeButtonCC1" />
 
     <EditText
         android:id="@+id/inputXMeanCC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
+        android:fontFamily="@font/advent_pro_bold"
         android:hint="Enter X Mean"
         android:inputType="numberDecimal"
-        app:layout_constraintBottom_toTopOf="@+id/inputSXCC"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.791"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.959" />
+        app:layout_constraintStart_toEndOf="@+id/negativeButtonCC2"
+        app:layout_constraintTop_toBottomOf="@+id/inputXValueCC" />
 
     <Button
         android:id="@+id/negativeButtonCC1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#323131"
+        android:fontFamily="@font/advent_pro_bold"
         android:text="+/-"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/negativeButtonCC2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.945" />
+        app:layout_constraintTop_toBottomOf="@+id/backButtonCC" />
 
     <TextView
         android:id="@+id/textCorrCoeff"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="42dp"
-        android:text="Correlation Coefficient"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/inputXValueCC"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.772"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.925" />
+        android:layout_width="280dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="42dp"
+        android:fontFamily="@font/advent_pro_bold"
+        android:text="CORRELATION COEFFICIENT"
+        android:textColor="#D68000"
+        android:textSize="26sp"
+        app:layout_constraintStart_toEndOf="@+id/backButtonCC"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/inputSXCC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="6dp"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
+        android:fontFamily="@font/advent_pro_bold"
         android:hint="Enter S_X"
         android:inputType="numberDecimal"
-        app:layout_constraintBottom_toTopOf="@+id/inputYValueCC"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.791"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.96" />
+        app:layout_constraintStart_toEndOf="@+id/negativeButtonCC3"
+        app:layout_constraintTop_toBottomOf="@+id/inputXMeanCC" />
 
     <EditText
         android:id="@+id/inputYValueCC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
+        android:fontFamily="@font/advent_pro_bold"
         android:hint="Enter Y Value"
         android:inputType="numberDecimal"
-        app:layout_constraintBottom_toTopOf="@+id/inputYMeanCC"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.791"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.93" />
+        app:layout_constraintStart_toEndOf="@+id/negativeButtonCC4"
+        app:layout_constraintTop_toBottomOf="@+id/inputSXCC" />
 
     <EditText
         android:id="@+id/inputYMeanCC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
+        android:fontFamily="@font/advent_pro_bold"
         android:hint="Enter Y Mean"
         android:inputType="numberDecimal"
-        app:layout_constraintBottom_toTopOf="@+id/inputSYCC"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.796"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.963" />
+        app:layout_constraintStart_toEndOf="@+id/negativeButtonCC5"
+        app:layout_constraintTop_toBottomOf="@+id/inputYValueCC" />
 
     <EditText
         android:id="@+id/inputSYCC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
+        android:fontFamily="@font/advent_pro_bold"
         android:hint="Enter S_Y"
         android:inputType="numberDecimal"
-        app:layout_constraintBottom_toTopOf="@+id/addButtonCC"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.796"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.855" />
+        app:layout_constraintStart_toEndOf="@+id/negativeButtonCC6"
+        app:layout_constraintTop_toBottomOf="@+id/inputYMeanCC" />
 
     <Button
         android:id="@+id/negativeButtonCC3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#323131"
+        android:fontFamily="@font/advent_pro_bold"
         android:text="+/-"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/negativeButtonCC4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/negativeButtonCC2" />
 
     <Button
         android:id="@+id/negativeButtonCC4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#323131"
+        android:fontFamily="@font/advent_pro_bold"
         android:text="+/-"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/negativeButtonCC5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.971" />
+        app:layout_constraintTop_toBottomOf="@+id/negativeButtonCC3" />
 
     <Button
         android:id="@+id/negativeButtonCC5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#323131"
+        android:fontFamily="@font/advent_pro_bold"
         android:text="+/-"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/negativeButtonCC6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.981" />
+        app:layout_constraintTop_toBottomOf="@+id/negativeButtonCC4" />
 
     <Button
         android:id="@+id/negativeButtonCC6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#323131"
+        android:fontFamily="@font/advent_pro_bold"
         android:text="+/-"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/clearButtonCC"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.853" />
+        app:layout_constraintTop_toBottomOf="@+id/negativeButtonCC5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

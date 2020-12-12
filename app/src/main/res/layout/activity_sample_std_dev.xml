@@ -4,47 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#1E1E1E"
     tools:context="com.calculatorapp.SampleStdDev">
 
     <Button
         android:id="@+id/addButtonSD"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="272dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#323131"
+        android:fontFamily="@font/advent_pro_bold"
         android:text="Add"
-        app:layout_constraintBottom_toTopOf="@+id/scrollSD"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.597"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/clearButtonSD"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/inputTextMeanSD" />
 
     <Button
         android:id="@+id/backButtonSD"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="33dp"
+        android:backgroundTint="#323131"
+        android:fontFamily="@font/advent_pro_bold"
         android:text="Back"
-        app:layout_constraintBottom_toTopOf="@+id/negativeButtonSD1"
-        app:layout_constraintEnd_toStartOf="@+id/textStdDev"
-        app:layout_constraintHorizontal_bias="0.424"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.208" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textStdDev"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="Sample Standard Deviation"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/inputTextValueSD"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.794"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_width="275dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="43dp"
+        android:fontFamily="@font/advent_pro_bold"
+        android:text="SAMPLE STANDARD DEVIATION"
+        android:textColor="#D68000"
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@+id/backButtonSD"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
         android:id="@+id/scrollSD"
@@ -66,77 +69,79 @@
                 android:id="@+id/outputTextSD"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/advent_pro_bold"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
                 android:visibility="visible" />
         </LinearLayout>
     </ScrollView>
 
     <Button
         android:id="@+id/clearButtonSD"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="272dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#323131"
+        android:fontFamily="@font/advent_pro_bold"
         android:text="Clear"
-        app:layout_constraintBottom_toTopOf="@+id/scrollSD"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.157"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/negativeButtonSD2" />
 
     <EditText
         android:id="@+id/inputTextValueSD"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
         android:ems="10"
+        android:fontFamily="@font/advent_pro_bold"
         android:hint="Enter Value"
         android:inputType="numberDecimal"
-        app:layout_constraintBottom_toTopOf="@+id/inputTextMeanSD"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.771"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.692" />
+        app:layout_constraintStart_toEndOf="@+id/negativeButtonSD1"
+        app:layout_constraintTop_toBottomOf="@+id/textStdDev" />
 
     <EditText
         android:id="@+id/inputTextMeanSD"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
         android:ems="10"
+        android:fontFamily="@font/advent_pro_bold"
         android:hint="Enter Mean"
         android:inputType="numberDecimal"
-        app:layout_constraintBottom_toTopOf="@+id/addButtonSD"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.771"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.687" />
+        app:layout_constraintStart_toEndOf="@+id/negativeButtonSD2"
+        app:layout_constraintTop_toBottomOf="@+id/inputTextValueSD" />
 
     <Button
         android:id="@+id/negativeButtonSD1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#323131"
+        android:fontFamily="@font/advent_pro_bold"
         android:text="+/-"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/negativeButtonSD2"
-        app:layout_constraintEnd_toStartOf="@+id/inputTextValueSD"
-        app:layout_constraintHorizontal_bias="0.426"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/backButtonSD" />
 
     <Button
         android:id="@+id/negativeButtonSD2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="156dp"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#323131"
+        android:fontFamily="@font/advent_pro_bold"
         android:text="+/-"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/clearButtonSD"
-        app:layout_constraintEnd_toStartOf="@+id/inputTextMeanSD"
-        app:layout_constraintHorizontal_bias="0.426"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/negativeButtonSD1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

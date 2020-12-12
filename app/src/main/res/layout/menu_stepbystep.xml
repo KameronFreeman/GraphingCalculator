@@ -24,8 +24,8 @@
 
     <TextView
         android:id="@+id/textTitleSBS"
-        android:layout_width="268dp"
-        android:layout_height="51dp"
+        android:layout_width="275dp"
+        android:layout_height="50dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="33dp"
         android:fontFamily="@font/advent_pro_bold"
@@ -41,7 +41,7 @@
         android:layout_width="361dp"
         android:layout_height="588dp"
         android:layout_marginStart="33dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="33dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
