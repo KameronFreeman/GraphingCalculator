@@ -5,51 +5,92 @@
     android:id="@+id/linearyequals"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#1E1E1E"
     tools:context="com.calculatorapp.GraphingCalcInputsActivity">
 
     <EditText
         android:id="@+id/linearEquationEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="80dp"
         android:hint="Enter Equation: mx + b form"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.679"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/linearYEquals"
+        app:layout_constraintTop_toBottomOf="@+id/titleGC" />
 
     <Button
         android:id="@+id/linearYEquals"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginTop="56dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="#323131"
+        android:fontFamily="sans-serif"
         android:text="y ="
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/linearEquationEditText"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/backButtonGC" />
 
     <Button
         android:id="@+id/graphButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="212dp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="#323131"
+        android:fontFamily="@font/advent_pro_bold"
         android:text="Graph"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/extraEquation" />
 
     <Button
         android:id="@+id/extraEquation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
+        android:layout_width="75sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#323131"
+        android:fontFamily="@font/advent_pro_bold"
         android:text="+"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearEquationEditText" />
+
+    <Button
+        android:id="@+id/backButtonGC"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="33dp"
+        android:backgroundTint="#323131"
+        android:fontFamily="@font/advent_pro_bold"
+        android:text="BACK"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleGC"
+        android:layout_width="275dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/advent_pro_bold"
+        android:text="GRAPHING CALCULATOR"
+        android:textColor="#D68000"
+        android:textSize="28sp"
+        app:layout_constraintStart_toEndOf="@+id/backButtonGC"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

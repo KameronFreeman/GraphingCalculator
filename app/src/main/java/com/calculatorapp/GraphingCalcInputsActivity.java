@@ -35,6 +35,19 @@ public class GraphingCalcInputsActivity extends AppCompatActivity {
         Button extraEquation = findViewById(R.id.extraEquation);
         final EditText linearEquation = findViewById(R.id.linearEquationEditText);
 
+        Button backButtonGC = findViewById(R.id.backButtonGC);
+        //if back button is clicked
+        backButtonGC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //go to main screen
+                Intent mainIntent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(mainIntent);
+            }
+        });
+
+
+
 
         extraEquation.setOnClickListener(new View.OnClickListener() {
             @Override

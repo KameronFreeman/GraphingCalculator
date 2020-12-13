@@ -97,9 +97,11 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="25dp"
         android:ems="10"
-        android:fontFamily="@font/advent_pro_bold"
+        android:fontFamily="sans-serif"
         android:hint="Enter Value"
         android:inputType="numberDecimal"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintStart_toEndOf="@+id/negativeButtonSD1"
         app:layout_constraintTop_toBottomOf="@+id/textStdDev" />
 
@@ -110,9 +112,11 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="25dp"
         android:ems="10"
-        android:fontFamily="@font/advent_pro_bold"
+        android:fontFamily="sans-serif"
         android:hint="Enter Mean"
         android:inputType="numberDecimal"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintStart_toEndOf="@+id/negativeButtonSD2"
         app:layout_constraintTop_toBottomOf="@+id/inputTextValueSD" />
 
