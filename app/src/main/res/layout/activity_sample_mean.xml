@@ -95,7 +95,7 @@
 
     <ScrollView
         android:id="@+id/scrollSM"
-        android:layout_width="387dp"
+        android:layout_width="375dp"
         android:layout_height="229dp"
         android:layout_marginTop="173dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -113,9 +113,9 @@
                 android:id="@+id/outputTextSM"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/advent_pro_bold"
+                android:fontFamily="sans-serif"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:visibility="visible" />
         </LinearLayout>
     </ScrollView>

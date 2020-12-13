@@ -38,7 +38,7 @@
 
     <EditText
         android:id="@+id/inputStdDevPM"
-        android:layout_width="250dp"
+        android:layout_width="225dp"
         android:layout_height="50dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
@@ -53,7 +53,7 @@
 
     <EditText
         android:id="@+id/inputCountPM"
-        android:layout_width="250dp"
+        android:layout_width="225dp"
         android:layout_height="50dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
@@ -96,14 +96,12 @@
 
     <ScrollView
         android:id="@+id/scrollPM"
-        android:layout_width="393dp"
-        android:layout_height="193dp"
-        android:layout_marginTop="173dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="375dp"
+        android:layout_height="215dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.932">
+        app:layout_constraintTop_toBottomOf="@+id/addButtonPM">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -114,13 +112,14 @@
                 android:id="@+id/outputTextPM"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
                 android:visibility="visible" />
         </LinearLayout>
     </ScrollView>
 
     <EditText
         android:id="@+id/inputExpectedPM"
-        android:layout_width="250dp"
+        android:layout_width="225dp"
         android:layout_height="50dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
@@ -135,10 +134,10 @@
 
     <EditText
         android:id="@+id/inputTextMeanPM"
-        android:layout_width="250dp"
+        android:layout_width="225dp"
         android:layout_height="50dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="70dp"
         android:ems="10"
         android:fontFamily="sans-serif"
         android:hint="Enter X Mean"
@@ -194,7 +193,7 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginStart="33dp"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="70dp"
         android:backgroundTint="#323131"
         android:text="+/-"
         android:textColor="#FFFFFF"

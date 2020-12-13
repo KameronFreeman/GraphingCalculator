@@ -13,7 +13,7 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginStart="33dp"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="70dp"
         android:backgroundTint="#323131"
         android:fontFamily="@font/advent_pro_bold"
         android:text="+/-"
@@ -109,13 +109,11 @@
         android:id="@+id/scrollPP"
         android:layout_width="382dp"
         android:layout_height="228dp"
-        android:layout_marginTop="173dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.951">
+        app:layout_constraintTop_toBottomOf="@+id/clearButtonPP">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -126,6 +124,7 @@
                 android:id="@+id/outputTextPP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
                 android:visibility="visible" />
         </LinearLayout>
     </ScrollView>
@@ -149,7 +148,7 @@
         android:layout_width="225dp"
         android:layout_height="50dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="70dp"
         android:ems="10"
         android:hint="Enter Ratio (p̂)"
         android:inputType="numberDecimal"

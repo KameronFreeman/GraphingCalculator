@@ -13,7 +13,7 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginStart="83dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="25dp"
         android:backgroundTint="#323131"
         android:fontFamily="@font/advent_pro_bold"
         android:text="Clear"
@@ -24,13 +24,12 @@
 
     <ScrollView
         android:id="@+id/scrollTM"
-        android:layout_width="397dp"
-        android:layout_height="143dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="375dp"
+        android:layout_height="175dp"
+        android:layout_marginTop="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.991">
+        app:layout_constraintTop_toBottomOf="@+id/clearButtonTM2">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -41,6 +40,7 @@
                 android:id="@+id/outputTextTM2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
                 android:visibility="visible" />
 
         </LinearLayout>
@@ -247,7 +247,7 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="25dp"
         android:backgroundTint="#323131"
         android:fontFamily="@font/advent_pro_bold"
         android:text="Add"

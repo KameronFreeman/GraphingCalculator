@@ -24,14 +24,12 @@
 
     <ScrollView
         android:id="@+id/scrollCC"
-        android:layout_width="397dp"
-        android:layout_height="157dp"
-        android:layout_marginTop="173dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="375dp"
+        android:layout_height="175dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.96">
+        app:layout_constraintTop_toBottomOf="@+id/addButtonCC">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -42,9 +40,9 @@
                 android:id="@+id/outputTextCC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/advent_pro_bold"
+                android:fontFamily="sans-serif"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:visibility="visible" />
         </LinearLayout>
     </ScrollView>
@@ -81,7 +79,7 @@
         android:id="@+id/inputXValueCC"
         android:layout_width="225dp"
         android:layout_height="50dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:fontFamily="sans-serif"
@@ -110,7 +108,7 @@
         android:id="@+id/inputXMeanCC"
         android:layout_width="225dp"
         android:layout_height="50dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:ems="10"
         android:fontFamily="sans-serif"
@@ -153,7 +151,7 @@
         android:id="@+id/inputSXCC"
         android:layout_width="225dp"
         android:layout_height="50dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:ems="10"
         android:fontFamily="sans-serif"
@@ -168,7 +166,7 @@
         android:id="@+id/inputYValueCC"
         android:layout_width="225dp"
         android:layout_height="50dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:ems="10"
         android:fontFamily="sans-serif"
@@ -184,7 +182,7 @@
         android:id="@+id/inputYMeanCC"
         android:layout_width="225dp"
         android:layout_height="50dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:ems="10"
         android:fontFamily="sans-serif"
@@ -199,7 +197,7 @@
         android:id="@+id/inputSYCC"
         android:layout_width="225dp"
         android:layout_height="50dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:ems="10"
         android:fontFamily="sans-serif"

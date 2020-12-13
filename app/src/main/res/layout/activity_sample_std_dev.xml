@@ -51,14 +51,13 @@
 
     <ScrollView
         android:id="@+id/scrollSD"
-        android:layout_width="411dp"
+        android:layout_width="375dp"
         android:layout_height="377dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.988">
+        app:layout_constraintTop_toBottomOf="@+id/addButtonSD">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -69,9 +68,9 @@
                 android:id="@+id/outputTextSD"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/advent_pro_bold"
+                android:fontFamily="sans-serif"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:visibility="visible" />
         </LinearLayout>
     </ScrollView>
@@ -92,7 +91,7 @@
 
     <EditText
         android:id="@+id/inputTextValueSD"
-        android:layout_width="250dp"
+        android:layout_width="225dp"
         android:layout_height="50dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="25dp"
@@ -107,7 +106,7 @@
 
     <EditText
         android:id="@+id/inputTextMeanSD"
-        android:layout_width="250dp"
+        android:layout_width="225dp"
         android:layout_height="50dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="25dp"
@@ -122,7 +121,7 @@
 
     <Button
         android:id="@+id/negativeButtonSD1"
-        android:layout_width="75dp"
+        android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginStart="33dp"
         android:layout_marginTop="25dp"
@@ -136,7 +135,7 @@
 
     <Button
         android:id="@+id/negativeButtonSD2"
-        android:layout_width="75dp"
+        android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginStart="33dp"
         android:layout_marginTop="25dp"
