@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.calculatorapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="30" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:icon="@drawable/icon2"
+        android:label="Math Multi-Tool"
+        android:roundIcon="@drawable/icon2"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.example.calculatorapp.QuadraticActivity" />
+        <activity android:name="com.calculatorapp.Mean2" />
+        <activity android:name="com.calculatorapp.calculusActivity" />
+        <activity android:name="com.calculatorapp.HyperGeoCalc" />
+        <activity android:name="com.calculatorapp.GraphingCalcInputsActivity" />
+        <activity android:name="com.calculatorapp.graphingActivity" />
+        <activity android:name="com.calculatorapp.BasicCalculator" />
+        <activity android:name="com.calculatorapp.PopProp" />
+        <activity android:name="com.calculatorapp.PopMean" />
+        <activity android:name="com.calculatorapp.CorrelationCoeff" />
+        <activity android:name="com.calculatorapp.SampleStdDev" />
+        <activity android:name="com.calculatorapp.SampleMean" />
+        <activity android:name="com.calculatorapp.StepbystepMenu" />
+        <activity android:name="com.calculatorapp.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

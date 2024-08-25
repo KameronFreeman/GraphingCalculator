@@ -1,5 +1,6 @@
 package com.calculatorapp;
 
+//import all required libraries
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
@@ -19,12 +20,14 @@ import java.util.ArrayList;
 
 public class GraphingCalcInputsActivity extends AppCompatActivity {
 
+    //create variables to hold equation
     public static ArrayList<Double> m = new ArrayList<>();
     public static ArrayList<Double> b = new ArrayList<>();
     public static ArrayList<String> trig = new ArrayList<>();
     public static ArrayList<Double> trigb = new ArrayList<>();
     int i = 0;
 
+    //create userInterface
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

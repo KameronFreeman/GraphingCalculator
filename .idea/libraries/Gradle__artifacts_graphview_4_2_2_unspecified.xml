@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: artifacts:graphview-4.2.2:unspecified">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/graphview-4.2.2/build/.transforms/7b2960f3a69b6311b35c0d04fc10cef3/jetified-graphview-4.2.2/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/graphview-4.2.2/build/.transforms/7b2960f3a69b6311b35c0d04fc10cef3/jetified-graphview-4.2.2/res" />
-      <root url="file://$PROJECT_DIR$/graphview-4.2.2/build/.transforms/7b2960f3a69b6311b35c0d04fc10cef3/jetified-graphview-4.2.2/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/graphview-4.2.2/build/.transforms/b670dd329ce29098cdf566437bee5c05/jetified-graphview-4.2.2/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/graphview-4.2.2/build/.transforms/b670dd329ce29098cdf566437bee5c05/jetified-graphview-4.2.2/res" />
+      <root url="jar://$PROJECT_DIR$/graphview-4.2.2/build/.transforms/b670dd329ce29098cdf566437bee5c05/jetified-graphview-4.2.2/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

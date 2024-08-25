@@ -1,0 +1,93 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.calculatorapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml
+10
+11    <application
+11-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:6:5-37:19
+12        android:allowBackup="true"
+12-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:7:9-35
+13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+13-->[androidx.core:core:1.3.1] C:\Users\kamer\.gradle\caches\transforms-2\files-2.1\fe05db651979b39875ef014855ff51f0\core-1.3.1\AndroidManifest.xml:24:18-86
+14        android:debuggable="true"
+15        android:icon="@drawable/icon2"
+15-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:8:9-39
+16        android:label="Math Multi-Tool"
+16-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:9:9-40
+17        android:roundIcon="@drawable/icon2"
+17-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:10:9-44
+18        android:supportsRtl="true"
+18-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:11:9-35
+19        android:testOnly="true"
+20        android:theme="@style/AppTheme" >
+20-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:12:9-40
+21        <activity android:name="com.example.calculatorapp.QuadraticActivity" />
+21-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:13:9-64
+21-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:13:19-52
+22        <activity android:name="com.calculatorapp.Mean2" />
+22-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:14:9-60
+22-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:14:19-57
+23        <activity android:name="com.calculatorapp.calculusActivity" />
+23-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:15:9-71
+23-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:15:19-68
+24        <activity android:name="com.calculatorapp.HyperGeoCalc" />
+24-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:16:9-67
+24-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:16:19-64
+25        <activity android:name="com.calculatorapp.GraphingCalcInputsActivity" />
+25-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:17:9-81
+25-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:17:19-78
+26        <activity android:name="com.calculatorapp.graphingActivity" />
+26-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:18:9-71
+26-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:18:19-68
+27        <activity android:name="com.calculatorapp.BasicCalculator" />
+27-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:19:9-70
+27-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:19:19-67
+28        <activity android:name="com.calculatorapp.PopProp" />
+28-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:20:9-62
+28-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:20:19-59
+29        <activity android:name="com.calculatorapp.PopMean" />
+29-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:21:9-62
+29-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:21:19-59
+30        <activity android:name="com.calculatorapp.CorrelationCoeff" />
+30-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:22:9-71
+30-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:22:19-68
+31        <activity android:name="com.calculatorapp.SampleStdDev" />
+31-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:23:9-67
+31-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:23:19-64
+32        <activity android:name="com.calculatorapp.SampleMean" />
+32-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:24:9-65
+32-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:24:19-62
+33        <activity android:name="com.calculatorapp.StepbystepMenu" />
+33-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:25:9-69
+33-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:25:19-66
+34        <activity android:name="com.calculatorapp.MainActivity" >
+34-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:26:9-32:20
+34-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:26:19-64
+35            <intent-filter>
+35-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:27:13-31:29
+36                <action android:name="android.intent.action.MAIN" />
+36-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:28:17-69
+36-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:28:25-66
+37
+38                <category android:name="android.intent.category.LAUNCHER" />
+38-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:30:17-77
+38-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:30:27-74
+39            </intent-filter>
+40        </activity>
+41
+42        <meta-data
+42-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:34:9-36:57
+43            android:name="preloaded_fonts"
+43-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:35:13-43
+44            android:resource="@array/preloaded_fonts" />
+44-->C:\Users\kamer\AndroidStudioProjects\GVSU-CIS350-CalculatorApp\app\src\main\AndroidManifest.xml:36:13-54
+45    </application>
+46
+47</manifest>
